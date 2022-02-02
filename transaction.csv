@@ -1,0 +1,749 @@
+Unnamed: 0,date,date_of_week,transaction_type,category,sub_category,amount,currency,note,Date
+0.0,2021-01-01,Friday,Assets,Wallet,Cash,588200,VND, Lots of money track loss,2021-01-01
+1.0,2021-01-01,Friday,Assets,Card,VISA,621577,VND, Lots of money track loss,2021-01-01
+2.0,2021-01-01,Friday,Assets,Card,ACB,7290227,VND, Lots of money track loss,2021-01-01
+3.0,2021-01-01,Friday,Assets,eWallet,MOCA,2500,VND, Lots of money track loss,2021-01-01
+4.0,2021-01-01,Friday,Equity,Balance,Opening Balances,-8502504,VND, Lots of money track loss,2021-01-01
+5.0,2021-01-03,Sunday,Expenses,Food,Breakfast,20000,VND,,2021-01-03
+6.0,2021-01-03,Sunday,Assets,Wallet,Cash,-20000,VND,,2021-01-03
+7.0,2021-01-07,Thursday,Expenses,Travel,Dalat 01/2021,1514000,VND,,2021-01-07
+8.0,2021-01-07,Thursday,Assets,Card,ACB,-1514000,VND,,2021-01-07
+16.0,2021-01-08,Friday,Assets,Card,ACB,-2141600,VND,,2021-01-08
+15.0,2021-01-08,Friday,Expenses,Drink,Soda,10600,VND,,2021-01-08
+14.0,2021-01-08,Friday,Expenses,Food,Eating Out,31000,VND,,2021-01-08
+13.0,2021-01-08,Friday,Assets,Wallet,Cash,-60000,VND,,2021-01-08
+9.0,2021-01-08,Friday,Income,Fulbright,Allowance,2100000,VND,,2021-01-08
+11.0,2021-01-08,Friday,Expenses,Drink,Drink,10000,VND, sữa đậu nành,2021-01-08
+10.0,2021-01-08,Friday,Expenses,Food,Breakfast,40000,VND, bún mắm,2021-01-08
+12.0,2021-01-08,Friday,Expenses,Transportation,Repairs,10000,VND,,2021-01-08
+21.0,2021-01-09,Saturday,Assets,Card,ACB,-450000,VND,,2021-01-09
+20.0,2021-01-09,Saturday,Expenses,Education,Books,450000,VND,,2021-01-09
+19.0,2021-01-09,Saturday,Assets,Wallet,Cash,-37000,VND,,2021-01-09
+18.0,2021-01-09,Saturday,Expenses,Personal,Stuffs,31000,VND,,2021-01-09
+17.0,2021-01-09,Saturday,Expenses,Transportation,Bus,6000,VND,,2021-01-09
+22.0,2021-01-10,Sunday,Expenses,Transportation,Bus,6000,VND,,2021-01-10
+23.0,2021-01-10,Sunday,Assets,Wallet,Cash,-6000,VND,,2021-01-10
+28.0,2021-01-11,Monday,Expenses,Household Items,Miscellaneous,16000,VND,,2021-01-11
+27.0,2021-01-11,Monday,Expenses,Drink,Juice,19300,VND,,2021-01-11
+29.0,2021-01-11,Monday,Expenses,Food,Instant Noodles,21900,VND,,2021-01-11
+25.0,2021-01-11,Monday,Expenses,Transportation,Parking Fees,5000,VND,,2021-01-11
+24.0,2021-01-11,Monday,Expenses,Food,Delivery,62000,VND,,2021-01-11
+26.0,2021-01-11,Monday,Assets,Wallet,Cash,-124200,VND,,2021-01-11
+30.0,2021-01-12,Tuesday,Expenses,Food,Afternoon Snack,13000,VND,,2021-01-12
+31.0,2021-01-12,Tuesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-01-12
+32.0,2021-01-12,Tuesday,Assets,Wallet,Cash,-18000,VND,,2021-01-12
+33.0,2021-01-12,Tuesday,Income,Part-time Jobs,Lasluz,-390000,VND,,2021-01-12
+34.0,2021-01-12,Tuesday,Assets,Card,ACB,390000,VND,,2021-01-12
+35.0,2021-01-13,Wednesday,Expenses,Transportation,Parking Fees,10000,VND,,2021-01-13
+36.0,2021-01-13,Wednesday,Assets,Wallet,Cash,-10000,VND,,2021-01-13
+42.0,2021-01-14,Thursday,Expenses,Food,Ready Lunch,35000,VND,,2021-01-14
+43.0,2021-01-14,Thursday,Expenses,Transportation,Parking Fees,15000,VND,,2021-01-14
+41.0,2021-01-14,Thursday,Expenses,Transportation,Gas,50000,VND,,2021-01-14
+44.0,2021-01-14,Thursday,Assets,Wallet,Cash,160000,VND,,2021-01-14
+39.0,2021-01-14,Thursday,Expenses,Drink,Water,24000,VND,,2021-01-14
+38.0,2021-01-14,Thursday,Expenses,Fees,Withdrawal Fees,1100,VND,,2021-01-14
+37.0,2021-01-14,Thursday,Assets,Card,ACB,-301100,VND,,2021-01-14
+40.0,2021-01-14,Thursday,Expenses,Food,Afternoon Snack,16000,VND,,2021-01-14
+45.0,2021-01-15,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-01-15
+46.0,2021-01-15,Friday,Assets,Wallet,Cash,-5000,VND,,2021-01-15
+47.0,2021-01-16,Saturday,Expenses,Transportation,Repairs,300000,VND,,2021-01-16
+48.0,2021-01-16,Saturday,Expenses,Food,Breakfast,10000,VND,,2021-01-16
+49.0,2021-01-16,Saturday,Expenses,Food,Eating Out,170000,VND,,2021-01-16
+50.0,2021-01-16,Saturday,Assets,Card,ACB,-170000,VND,,2021-01-16
+51.0,2021-01-16,Saturday,Assets,Wallet,Cash,-310000,VND,,2021-01-16
+57.0,2021-01-17,Sunday,Assets,Wallet,Cash,-220000,VND,,2021-01-17
+56.0,2021-01-17,Sunday,Expenses,Transportation,Parking Fees,10000,VND,,2021-01-17
+55.0,2021-01-17,Sunday,Expenses,Education,Printing,133000,VND,,2021-01-17
+53.0,2021-01-17,Sunday,Expenses,Food,Sandwich,12000,VND,,2021-01-17
+52.0,2021-01-17,Sunday,Expenses,Food,Breakfast,25000,VND,,2021-01-17
+54.0,2021-01-17,Sunday,Expenses,Food,Lunch,40000,VND,,2021-01-17
+58.0,2021-01-18,Monday,Expenses,Food,Dinner,30000,VND,,2021-01-18
+59.0,2021-01-18,Monday,Assets,Wallet,Cash,-30000,VND,,2021-01-18
+60.0,2021-01-18,Monday,Income,Fulbright,TA,-427500,VND,,2021-01-18
+61.0,2021-01-18,Monday,Assets,Card,ACB,427500,VND,,2021-01-18
+71.0,2021-01-19,Tuesday,Expenses,Drink,Soda,12000,VND,,2021-01-19
+76.0,2021-01-19,Tuesday,Expenses,Education,Books,219680,VND,,2021-01-19
+75.0,2021-01-19,Tuesday,Assets,Card,ACB,-822262,VND, RIVER CITY a nurse's year in Vietnam\n When Heaven and Earth Changed Places,2021-01-19
+77.0,2021-01-19,Tuesday,Assets,Card,VISA,-219680,VND,,2021-01-19
+74.0,2021-01-19,Tuesday,Expenses,Food,Condiment,34500,VND,,2021-01-19
+73.0,2021-01-19,Tuesday,Expenses,Food,Condensed Milk,47000,VND,,2021-01-19
+72.0,2021-01-19,Tuesday,Expenses,Drink,Juice,14500,VND,,2021-01-19
+70.0,2021-01-19,Tuesday,Expenses,Food,Meat,107404,VND," ức gà, thịt xay",2021-01-19
+64.0,2021-01-19,Tuesday,Assets,Wallet,Cash,400000,VND,,2021-01-19
+68.0,2021-01-19,Tuesday,Expenses,Food,Vegetable,63163,VND,,2021-01-19
+67.0,2021-01-19,Tuesday,Expenses,Food,Snack,37000,VND, xúc xích,2021-01-19
+66.0,2021-01-19,Tuesday,Expenses,Food,Fruit,27876,VND,,2021-01-19
+65.0,2021-01-19,Tuesday,Expenses,Fees,Withdrawal Fees,1100,VND, đi chợ,2021-01-19
+63.0,2021-01-19,Tuesday,Assets,Wallet,Cash,-22000,VND,,2021-01-19
+62.0,2021-01-19,Tuesday,Expenses,Food,Bread,22000,VND,,2021-01-19
+69.0,2021-01-19,Tuesday,Expenses,Food,Seafood,77719,VND," cá ba sa, tôm, phi lê ba sa",2021-01-19
+80.0,2021-01-20,Wednesday,Assets,Wallet,Cash,-47000,VND,,2021-01-20
+79.0,2021-01-20,Wednesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-01-20
+78.0,2021-01-20,Wednesday,Expenses,Food,Lunch,42000,VND,,2021-01-20
+81.0,2021-01-21,Thursday,Expenses,Drink,Revive,39000,VND,,2021-01-21
+82.0,2021-01-21,Thursday,Expenses,Personal,Miscellaneous,50000,VND,,2021-01-21
+83.0,2021-01-21,Thursday,Expenses,Food,Dimsum,54000,VND,,2021-01-21
+84.0,2021-01-21,Thursday,Expenses,Transportation,Parking Fees,10000,VND,,2021-01-21
+85.0,2021-01-21,Thursday,Assets,Wallet,Cash,-153000,VND,,2021-01-21
+92.0,2021-01-23,Saturday,Expenses,Food,Breakfast,25000,VND,,2021-01-23
+93.0,2021-01-23,Saturday,Assets,Wallet,Cash,-25000,VND,,2021-01-23
+91.0,2021-01-23,Saturday,Assets,Card,ACB,-42000,VND,,2021-01-23
+90.0,2021-01-23,Saturday,Expenses,Personal,Stuffs,23500,VND,,2021-01-23
+89.0,2021-01-23,Saturday,Expenses,Drink,Strongbow,18500,VND,,2021-01-23
+88.0,2021-01-23,Saturday,Expenses,Transportation,Grab,61000,VND,,2021-01-23
+87.0,2021-01-23,Saturday,Assets,eWallet,MOCA,239000,VND,,2021-01-23
+86.0,2021-01-23,Saturday,Assets,Card,ACB,-300000,VND,,2021-01-23
+94.0,2021-01-25,Monday,Expenses,Transportation,Grab,164000,VND, trả tiền grab car cho KMinh và LeKhoa,2021-01-25
+95.0,2021-01-25,Monday,Assets,Card,ACB,-164000,VND,,2021-01-25
+96.0,2021-01-27,Wednesday,Assets,Wallet,Cash,-50000,VND,,2021-01-27
+97.0,2021-01-28,Thursday,Expenses,Personal,Beauty,300000,VND, nặn mụn,2021-01-28
+98.0,2021-01-28,Thursday,Assets,Card,ACB,-300000,VND,,2021-01-28
+99.0,2021-01-28,Thursday,Expenses,Transportation,Grab,41000,VND,,2021-01-28
+100.0,2021-01-28,Thursday,Assets,eWallet,MOCA,-41000,VND,,2021-01-28
+111.0,2021-01-29,Friday,Assets,eWallet,MOCA,-52000,VND,,2021-01-29
+110.0,2021-01-29,Friday,Expenses,Transportation,Grab Express,52000,VND,,2021-01-29
+109.0,2021-01-29,Friday,Assets,Wallet,Cash,500000,VND,,2021-01-29
+108.0,2021-01-29,Friday,Income,Fulbright,ICPC Awards,-670000,VND,,2021-01-29
+107.0,2021-01-29,Friday,Expenses,Personal,Stuffs,30000,VND, xơ mướp,2021-01-29
+101.0,2021-01-29,Friday,Assets,Card,ACB,-301100,VND,,2021-01-29
+105.0,2021-01-29,Friday,Expenses,Food,Breakfast,10000,VND,,2021-01-29
+104.0,2021-01-29,Friday,Expenses,Food,Lunch,25000,VND,,2021-01-29
+103.0,2021-01-29,Friday,Assets,Wallet,Cash,393000,VND,,2021-01-29
+102.0,2021-01-29,Friday,Expenses,Fees,Withdrawal Fees,1100,VND,,2021-01-29
+106.0,2021-01-29,Friday,Expenses,Food,Sandwich,12000,VND,,2021-01-29
+115.0,2021-01-30,Saturday,Assets,Wallet,Cash,-42000,VND,,2021-01-30
+114.0,2021-01-30,Saturday,Expenses,Food,Lunch,42000,VND,,2021-01-30
+112.0,2021-01-30,Saturday,Expenses,Transportation,Grab,69000,VND,,2021-01-30
+113.0,2021-01-30,Saturday,Assets,eWallet,MOCA,-69000,VND,,2021-01-30
+123.0,2021-01-31,Sunday,Assets,Card,ACB,-25000,VND,,2021-01-31
+116.0,2021-01-31,Sunday,Expenses,Drink,Revive,39000,VND,,2021-01-31
+117.0,2021-01-31,Sunday,Assets,Wallet,Cash,-69000,VND,,2021-01-31
+118.0,2021-01-31,Sunday,Expenses,Transportation,Gas,20000,VND,,2021-01-31
+119.0,2021-01-31,Sunday,Expenses,Transportation,Parking Fees,10000,VND,,2021-01-31
+120.0,2021-01-31,Sunday,Expenses,Transportation,Grab,68000,VND,,2021-01-31
+121.0,2021-01-31,Sunday,Assets,eWallet,MOCA,-68000,VND,,2021-01-31
+122.0,2021-01-31,Sunday,Expenses,Food,Bonding,25000,VND,,2021-01-31
+130.0,2021-02-01,Monday,Expenses,Transportation,Grab Express,22000,VND,,2021-02-01
+129.0,2021-02-01,Monday,Assets,eWallet,MOCA,200000,VND,,2021-02-01
+128.0,2021-02-01,Monday,Assets,Card,ACB,-200000,VND,,2021-02-01
+125.0,2021-02-01,Monday,Expenses,Food,Snack,5000,VND,,2021-02-01
+126.0,2021-02-01,Monday,Expenses,Personal,Stuffs,10000,VND, nước muối sinh lí,2021-02-01
+124.0,2021-02-01,Monday,Expenses,Transportation,Parking Fees,10000,VND,,2021-02-01
+131.0,2021-02-01,Monday,Assets,eWallet,MOCA,-22000,VND,,2021-02-01
+127.0,2021-02-01,Monday,Assets,Wallet,Cash,-25000,VND,,2021-02-01
+137.0,2021-02-02,Tuesday,Expenses,Food,Breakfast,27000,VND,,2021-02-02
+136.0,2021-02-02,Tuesday,Expenses,Personal,Misc,50000,VND,,2021-02-02
+138.0,2021-02-02,Tuesday,Assets,Card,ACB,-27000,VND,,2021-02-02
+135.0,2021-02-02,Tuesday,Assets,eWallet,MOCA,-124000,VND,,2021-02-02
+133.0,2021-02-02,Tuesday,Assets,Wallet,Cash,-202000,VND,,2021-02-02
+134.0,2021-02-02,Tuesday,Expenses,Transportation,Grab,124000,VND,,2021-02-02
+132.0,2021-02-02,Tuesday,Expenses,Transportation,Grab,152000,VND, san bay ve nha,2021-02-02
+139.0,2021-02-03,Wednesday,Income,Fulbright,Allowance,-700000,VND,,2021-02-03
+140.0,2021-02-03,Wednesday,Assets,Card,ACB,700000,VND,,2021-02-03
+141.0,2021-02-05,Friday,Expenses,Utility,Phone,30000,VND,,2021-02-05
+142.0,2021-02-05,Friday,Assets,Card,ACB,-30000,VND,,2021-02-05
+143.0,2021-02-08,Monday,Income,Part-time Jobs,Lasluz,-390000,VND,,2021-02-08
+144.0,2021-02-08,Monday,Assets,Card,ACB,390000,VND,,2021-02-08
+148.0,2021-02-14,Sunday,Assets,Wallet,Cash,400000,VND,,2021-02-14
+147.0,2021-02-14,Sunday,Income,Home,Parents,900000,VND,,2021-02-14
+146.0,2021-02-14,Sunday,Assets,Wallet,Home,1900000,VND,,2021-02-14
+145.0,2021-02-14,Sunday,Income,Home,Tet,-3200000,VND,,2021-02-14
+149.0,2021-02-15,Monday,Expenses,Entertainment,Old Friends,25000,VND,,2021-02-15
+150.0,2021-02-15,Monday,Assets,Wallet,Cash,-25000,VND,,2021-02-15
+151.0,2021-02-16,Tuesday,Expenses,Entertainment,Old Friends,190000,VND,,2021-02-16
+152.0,2021-02-16,Tuesday,Assets,Wallet,Cash,-190000,VND,,2021-02-16
+153.0,2021-02-17,Wednesday,Saving,Fintech,Finhay,500000,VND,,2021-02-17
+154.0,2021-02-17,Wednesday,Expenses,Fees,Transfer Fees,5000,VND,,2021-02-17
+155.0,2021-02-17,Wednesday,Assets,Card,ACB,-505000,VND,,2021-02-17
+158.0,2021-02-21,Sunday,Assets,Wallet,Cash,-115000,VND,,2021-02-21
+157.0,2021-02-21,Sunday,Expenses,Education,Print,75000,VND,,2021-02-21
+156.0,2021-02-21,Sunday,Expenses,Personal,Stationary,40000,VND,,2021-02-21
+159.0,2021-02-27,Saturday,Expenses,Personal,Stationary,16000,VND,,2021-02-27
+160.0,2021-02-27,Saturday,Assets,Wallet,Cash,-16000,VND,,2021-02-27
+161.0,2021-03-08,Monday,Income,Fulbright,Allowance,-3100000,VND,,2021-03-08
+162.0,2021-03-08,Monday,Income,Part-time Jobs,Lasluz,-195000,VND,,2021-03-08
+163.0,2021-03-08,Monday,Assets,Card,ACB,3295000,VND,,2021-03-08
+166.0,2021-03-10,Wednesday,Assets,Card,ACB,-625000,VND,,2021-03-10
+164.0,2021-03-10,Wednesday,Saving,Fintech,Finhay,620000,VND,,2021-03-10
+165.0,2021-03-10,Wednesday,Expenses,Fees,Transfer Fees,5000,VND,,2021-03-10
+172.0,2021-03-14,Sunday,Expenses,Transportation,Flight,500000,VND,,2021-03-14
+171.0,2021-03-14,Sunday,Assets,Wallet,Home,-1000000,VND,,2021-03-14
+170.0,2021-03-14,Sunday,Assets,Wallet,Cash,500000,VND,,2021-03-14
+173.0,2021-03-14,Sunday,Assets,Card,ACB,-300000,VND,,2021-03-14
+168.0,2021-03-14,Sunday,Expenses,Fees,Transfer Fees,10000,VND,,2021-03-14
+167.0,2021-03-14,Sunday,Assets,Card,ACB,-2510000,VND,,2021-03-14
+169.0,2021-03-14,Sunday,Saving,Fintech,Finhay,2500000,VND,,2021-03-14
+174.0,2021-03-14,Sunday,Assets,eWallet,MOCA,300000,VND,,2021-03-14
+176.0,2021-03-20,Saturday,Equity,Balance,Balancing,36328,VND,,2021-03-20
+175.0,2021-03-20,Saturday,Expenses,Education,Audible,188032,VND,,2021-03-20
+177.0,2021-03-20,Saturday,Assets,Card,VISA,-224360,VND,,2021-03-20
+183.0,2021-03-21,Sunday,Expenses,Drink,Beverage,5000,VND,,2021-03-21
+184.0,2021-03-21,Sunday,Expenses,Drink,Milk,104000,VND,,2021-03-21
+182.0,2021-03-21,Sunday,Expenses,Food,Bread,12000,VND,,2021-03-21
+185.0,2021-03-21,Sunday,Assets,Wallet,Cash,-252500,VND,,2021-03-21
+180.0,2021-03-21,Sunday,Expenses,Drink,Water,36000,VND,,2021-03-21
+179.0,2021-03-21,Sunday,Expenses,Food,Breakfast,25000,VND,,2021-03-21
+178.0,2021-03-21,Sunday,Expenses,Transportation,Gas,50000,VND,,2021-03-21
+181.0,2021-03-21,Sunday,Expenses,Food,Afternoon Snack,20500,VND,,2021-03-21
+186.0,2021-03-23,Tuesday,Expenses,Food,Rice,180000,VND,,2021-03-23
+187.0,2021-03-23,Tuesday,Expenses,Food,Afternoon Snack,16000,VND,,2021-03-23
+188.0,2021-03-23,Tuesday,Assets,Wallet,Cash,-196000,VND,,2021-03-23
+190.0,2021-03-25,Thursday,Assets,Wallet,Cash,-10000,VND,,2021-03-25
+189.0,2021-03-25,Thursday,Expenses,Food,Afternoon Snack,10000,VND,,2021-03-25
+191.0,2021-03-27,Saturday,Expenses,Food,Ready Lunch,56000,VND,,2021-03-27
+192.0,2021-03-27,Saturday,Expenses,Personal,Misc,55000,VND, dầu gội,2021-03-27
+193.0,2021-03-27,Saturday,Expenses,Food,Condiment,16000,VND, xì dầu,2021-03-27
+194.0,2021-03-27,Saturday,Expenses,Food,Condiment,20000,VND, hành tỏi,2021-03-27
+195.0,2021-03-27,Saturday,Assets,Wallet,Cash,-147000,VND,,2021-03-27
+201.0,2021-03-29,Monday,Assets,Card,ACB,-500000,VND,,2021-03-29
+202.0,2021-03-29,Monday,Assets,Wallet,Cash,331000,VND,,2021-03-29
+200.0,2021-03-29,Monday,Expenses,Food,Vegetables,18000,VND,,2021-03-29
+203.0,2021-03-29,Monday,Expenses,Transportation,Parking Fees,10000,VND,,2021-03-29
+198.0,2021-03-29,Monday,Expenses,Food,Afternoon Snack,16000,VND,,2021-03-29
+197.0,2021-03-29,Monday,Expenses,Drink,Water,36000,VND,,2021-03-29
+196.0,2021-03-29,Monday,Expenses,Food,Snack,49000,VND,,2021-03-29
+199.0,2021-03-29,Monday,Expenses,Food,Ready Lunch,40000,VND,,2021-03-29
+204.0,2021-03-30,Tuesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-03-30
+205.0,2021-03-30,Tuesday,Expenses,Food,Afternoon Snack,16000,VND,,2021-03-30
+206.0,2021-03-30,Tuesday,Expenses,Food,Breakfast,39000,VND,,2021-03-30
+207.0,2021-03-30,Tuesday,Expenses,Food,Lunch,30000,VND,,2021-03-30
+208.0,2021-03-30,Tuesday,Assets,Wallet,Cash,-90000,VND,,2021-03-30
+209.0,2021-03-31,Wednesday,Expenses,Food,Lunch,30000,VND,,2021-03-31
+210.0,2021-03-31,Wednesday,Assets,Wallet,Cash,-30000,VND,,2021-03-31
+216.0,2021-04-01,Thursday,Assets,Card,ACB,-31000,VND,,2021-04-01
+215.0,2021-04-01,Thursday,Assets,Wallet,Cash,-45000,VND,,2021-04-01
+214.0,2021-04-01,Thursday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-01
+212.0,2021-04-01,Thursday,Expenses,Food,Dinner,31000,VND,,2021-04-01
+211.0,2021-04-01,Thursday,Expenses,Food,Lunch,30000,VND,,2021-04-01
+213.0,2021-04-01,Thursday,Expenses,Givings,Lottery,10000,VND,,2021-04-01
+217.0,2021-04-02,Friday,Expenses,Food,Breakfast,26000,VND,,2021-04-02
+218.0,2021-04-02,Friday,Expenses,Food,Lunch,50000,VND,,2021-04-02
+219.0,2021-04-02,Friday,Expenses,Transportation,Parking Fees,10000,VND,,2021-04-02
+220.0,2021-04-02,Friday,Expenses,Transportation,Gas,50000,VND,,2021-04-02
+221.0,2021-04-02,Friday,Expenses,Food,Dinner,31000,VND,,2021-04-02
+222.0,2021-04-02,Friday,Assets,Card,ACB,-31000,VND,,2021-04-02
+223.0,2021-04-02,Friday,Assets,Wallet,Cash,-136000,VND,,2021-04-02
+229.0,2021-04-03,Saturday,Assets,Card,ACB,3000000,VND,,2021-04-03
+228.0,2021-04-03,Saturday,Income,Fulbright,Allowance,-3000000,VND,,2021-04-03
+227.0,2021-04-03,Saturday,Assets,Wallet,Cash,-5000,VND,,2021-04-03
+226.0,2021-04-03,Saturday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-03
+225.0,2021-04-03,Saturday,Assets,Card,ACB,-40000,VND,,2021-04-03
+224.0,2021-04-03,Saturday,Expenses,Food,Lunch,40000,VND,,2021-04-03
+230.0,2021-04-04,Sunday,Expenses,Transportation,Bus,12000,VND,,2021-04-04
+231.0,2021-04-04,Sunday,Assets,Wallet,Cash,27000,VND,,2021-04-04
+232.0,2021-04-04,Sunday,Assets,Card,ACB,-110000,VND,,2021-04-04
+233.0,2021-04-04,Sunday,Expenses,Food,Lunch,35000,VND,,2021-04-04
+234.0,2021-04-04,Sunday,Expenses,Food,Afternoon Snack,22000,VND,,2021-04-04
+235.0,2021-04-04,Sunday,Expenses,Food,Vegetables,10000,VND,,2021-04-04
+236.0,2021-04-04,Sunday,Assets,Card,ACB,-10000,VND,,2021-04-04
+237.0,2021-04-04,Sunday,Expenses,Drink,Water,14000,VND,,2021-04-04
+246.0,2021-04-05,Monday,Assets,Wallet,Cash,490000,VND,,2021-04-05
+245.0,2021-04-05,Monday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-05
+244.0,2021-04-05,Monday,Assets,Wallet,Cash,-5000,VND,,2021-04-05
+243.0,2021-04-05,Monday,Saving,Fintech,Finhay,1500000,VND,,2021-04-05
+238.0,2021-04-05,Monday,Expenses,Food,Delivery,42000,VND,,2021-04-05
+241.0,2021-04-05,Monday,Expenses,Fees,Transfer Fees,11100,VND,,2021-04-05
+240.0,2021-04-05,Monday,Assets,Card,ACB,-501100,VND,,2021-04-05
+239.0,2021-04-05,Monday,Assets,eWallet,MOCA,-42000,VND,,2021-04-05
+242.0,2021-04-05,Monday,Assets,Card,ACB,-1500000,VND,,2021-04-05
+251.0,2021-04-06,Tuesday,Assets,Wallet,Cash,100000,VND,,2021-04-06
+253.0,2021-04-06,Tuesday,Assets,Wallet,Cash,-311000,VND,,2021-04-06
+252.0,2021-04-06,Tuesday,Assets,Card,ACB,-100000,VND,,2021-04-06
+250.0,2021-04-06,Tuesday,Assets,Card,ACB,200000,VND,,2021-04-06
+247.0,2021-04-06,Tuesday,Expenses,Food,Morning Snack,16000,VND,,2021-04-06
+248.0,2021-04-06,Tuesday,Expenses,Personal,Cosmetic,295000,VND,,2021-04-06
+249.0,2021-04-06,Tuesday,Assets,Wallet,Cash,-200000,VND,,2021-04-06
+254.0,2021-04-07,Wednesday,Assets,Wallet,Cash,-64000,VND,,2021-04-07
+255.0,2021-04-07,Wednesday,Assets,Card,ACB,64000,VND,,2021-04-07
+259.0,2021-04-08,Thursday,Expenses,Personal,Shared,20000,VND,,2021-04-08
+258.0,2021-04-08,Thursday,Expenses,Food,Afternoon Snack,16000,VND,,2021-04-08
+260.0,2021-04-08,Thursday,Assets,Card,ACB,-126000,VND,,2021-04-08
+256.0,2021-04-08,Thursday,Expenses,Food,Breakfast,28000,VND,,2021-04-08
+257.0,2021-04-08,Thursday,Expenses,Food,Lunch,62000,VND,,2021-04-08
+261.0,2021-04-09,Friday,Expenses,Food,Afternoon Snack,17000,VND,,2021-04-09
+262.0,2021-04-09,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-09
+263.0,2021-04-09,Friday,Assets,Wallet,Cash,-22000,VND,,2021-04-09
+264.0,2021-04-09,Friday,Income,Part-time Jobs,Lasluz,-780000,VND,,2021-04-09
+265.0,2021-04-09,Friday,Assets,Card,ACB,780000,VND,,2021-04-09
+270.0,2021-04-10,Saturday,Expenses,Fees,Transfer Fees,1100,VND,,2021-04-10
+271.0,2021-04-10,Saturday,Assets,Card,ACB,-600000,VND,,2021-04-10
+269.0,2021-04-10,Saturday,Assets,Card,ACB,-334100,VND,,2021-04-10
+272.0,2021-04-10,Saturday,Assets,Card,VISA,600000,VND,,2021-04-10
+267.0,2021-04-10,Saturday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-10
+266.0,2021-04-10,Saturday,Expenses,Food,Breakfast,28000,VND,,2021-04-10
+268.0,2021-04-10,Saturday,Assets,Wallet,Cash,300000,VND,,2021-04-10
+275.0,2021-04-11,Sunday,Expenses,Food,Dinner,60000,VND, lotte,2021-04-11
+276.0,2021-04-11,Sunday,Assets,Wallet,Cash,-86000,VND,,2021-04-11
+273.0,2021-04-11,Sunday,Expenses,Transportation,Bus,12000,VND,,2021-04-11
+274.0,2021-04-11,Sunday,Expenses,Drink,Water,14000,VND,,2021-04-11
+277.0,2021-04-12,Monday,Expenses,Food,Breakfast,27000,VND, hotdog + vinamilk,2021-04-12
+278.0,2021-04-12,Monday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-12
+279.0,2021-04-12,Monday,Assets,Wallet,Cash,-327000,VND,,2021-04-12
+280.0,2021-04-12,Monday,Assets,Card,ACB,350000,VND,,2021-04-12
+281.0,2021-04-12,Monday,Equity,Balance,Balancing,-23000,VND,,2021-04-12
+282.0,2021-04-12,Monday,Assets,Wallet,Cash,-32000,VND,,2021-04-12
+285.0,2021-04-13,Tuesday,Expenses,Givings,Lottery,10000,VND,,2021-04-13
+286.0,2021-04-13,Tuesday,Assets,Wallet,Cash,-65000,VND,,2021-04-13
+283.0,2021-04-13,Tuesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-13
+284.0,2021-04-13,Tuesday,Expenses,Food,Eating Out,50000,VND, an do chay vs Minh Han,2021-04-13
+289.0,2021-04-14,Wednesday,Expenses,Food,Afternoon Snack,16000,VND, bread,2021-04-14
+290.0,2021-04-14,Wednesday,Expenses,Food,Instant Noodles,18000,VND, x2,2021-04-14
+291.0,2021-04-14,Wednesday,Expenses,Drink,Milk,36000,VND, x4,2021-04-14
+292.0,2021-04-14,Wednesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-14
+293.0,2021-04-14,Wednesday,Assets,Wallet,Cash,-149000,VND,,2021-04-14
+287.0,2021-04-14,Wednesday,Expenses,Food,Lunch,61000,VND, kfc + extra rice,2021-04-14
+288.0,2021-04-14,Wednesday,Expenses,Food,Afternoon Snack,13000,VND, ice cream,2021-04-14
+299.0,2021-04-15,Thursday,Assets,Wallet,Cash,-91000,VND,,2021-04-15
+302.0,2021-04-15,Thursday,Equity,Balance,Balancing,13174,VND,,2021-04-15
+301.0,2021-04-15,Thursday,Assets,Card,VISA,-13174,VND,,2021-04-15
+300.0,2021-04-15,Thursday,Equity,Balance,Balancing,91000,VND,,2021-04-15
+298.0,2021-04-15,Thursday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-15
+295.0,2021-04-15,Thursday,Assets,Wallet,Cash,-14000,VND,,2021-04-15
+294.0,2021-04-15,Thursday,Expenses,Food,Breakfast,9000,VND, milo,2021-04-15
+296.0,2021-04-15,Thursday,Expenses,Food,Lunch,39000,VND,,2021-04-15
+297.0,2021-04-15,Thursday,Assets,Card,ACB,-39000,VND,,2021-04-15
+305.0,2021-04-16,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-16
+308.0,2021-04-16,Friday,Expenses,Fees,Transfer Fees,1100,VND,,2021-04-16
+313.0,2021-04-16,Friday,Assets,Card,VISA,-5000,VND,,2021-04-16
+312.0,2021-04-16,Friday,Expenses,Fees,VISA Card Service,5000,VND,,2021-04-16
+306.0,2021-04-16,Friday,Assets,Card,ACB,-901100,VND,,2021-04-16
+311.0,2021-04-16,Friday,Assets,Wallet,Cash,-108000,VND,,2021-04-16
+304.0,2021-04-16,Friday,Expenses,Transportation,Gas,50000,VND,,2021-04-16
+303.0,2021-04-16,Friday,Expenses,Personal,Misc,53000,VND,,2021-04-16
+307.0,2021-04-16,Friday,Assets,Wallet,Cash,900000,VND,,2021-04-16
+310.0,2021-04-16,Friday,Assets,Card,ACB,-40000,VND,,2021-04-16
+309.0,2021-04-16,Friday,Expenses,Food,Dinner,40000,VND,,2021-04-16
+314.0,2021-04-17,Saturday,Expenses,Drink,Coffee,10000,VND,,2021-04-17
+315.0,2021-04-17,Saturday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-17
+316.0,2021-04-17,Saturday,Expenses,Drink,Drink,10000,VND,nước mía với Minh Hân,2021-04-17
+317.0,2021-04-17,Saturday,Expenses,Food,Vegetables,12000,VND,,2021-04-17
+318.0,2021-04-17,Saturday,Assets,Wallet,Cash,-37000,VND,,2021-04-17
+322.0,2021-04-18,Sunday,Expenses,Food,Dinner,20000,VND,,2021-04-18
+324.0,2021-04-18,Sunday,Expenses,Drink,Water,14000,VND,,2021-04-18
+325.0,2021-04-18,Sunday,Assets,Wallet,Cash,-76000,VND,,2021-04-18
+320.0,2021-04-18,Sunday,Assets,Card,ACB,-76000,VND,,2021-04-18
+323.0,2021-04-18,Sunday,Expenses,Drink,Smoothie,30000,VND,,2021-04-18
+321.0,2021-04-18,Sunday,Expenses,Transportation,Bus,12000,VND,,2021-04-18
+319.0,2021-04-18,Sunday,Expenses,Food,Eating Out,76000,VND,,2021-04-18
+326.0,2021-04-19,Monday,Expenses,Food,Delivery,47000,VND,,2021-04-19
+327.0,2021-04-19,Monday,Assets,eWallet,MOCA,-47000,VND,,2021-04-19
+328.0,2021-04-19,Monday,Expenses,Drink,Milk,102700,VND,,2021-04-19
+329.0,2021-04-19,Monday,Expenses,Food,Afternoon Snack,13400,VND,,2021-04-19
+330.0,2021-04-19,Monday,Expenses,Food,Condensed Milk,48000,VND, 24k x2,2021-04-19
+331.0,2021-04-19,Monday,Expenses,Food,Instant Noodles,46800,VND,,2021-04-19
+332.0,2021-04-19,Monday,Expenses,Food,Peanut Butter,34500,VND,,2021-04-19
+333.0,2021-04-19,Monday,Assets,Card,ACB,-245400,VND,,2021-04-19
+336.0,2021-04-20,Tuesday,Assets,Card,ACB,-131000,VND,,2021-04-20
+337.0,2021-04-20,Tuesday,Assets,Wallet,Cash,15000,VND,,2021-04-20
+334.0,2021-04-20,Tuesday,Expenses,Drink,Coffee,54000,VND,,2021-04-20
+335.0,2021-04-20,Tuesday,Expenses,Personal,Misc,62000,VND,,2021-04-20
+338.0,2021-04-21,Wednesday,Expenses,Food,Eating Out,40000,VND," beering deep talk vs Le Khoa, 2 budweisers",2021-04-21
+339.0,2021-04-21,Wednesday,Assets,Card,ACB,-40000,VND,,2021-04-21
+340.0,2021-04-21,Wednesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-21
+341.0,2021-04-21,Wednesday,Assets,Wallet,Cash,-5000,VND,,2021-04-21
+342.0,2021-04-22,Thursday,Expenses,Food,Breakfast,29000,VND,,2021-04-22
+343.0,2021-04-22,Thursday,Expenses,Food,Lunch,39000,VND, kfc,2021-04-22
+344.0,2021-04-22,Thursday,Assets,Card,ACB,-68000,VND,,2021-04-22
+349.0,2021-04-23,Friday,Expenses,Food,Eating Out,41000,VND, kfc vs Minh Han,2021-04-23
+350.0,2021-04-23,Friday,Assets,Card,ACB,-41000,VND,,2021-04-23
+348.0,2021-04-23,Friday,Assets,Wallet,Cash,-5000,VND,,2021-04-23
+346.0,2021-04-23,Friday,Assets,Card,ACB,-30000,VND,,2021-04-23
+347.0,2021-04-23,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-23
+345.0,2021-04-23,Friday,Expenses,Food,Breakfast,30000,VND,,2021-04-23
+351.0,2021-04-24,Saturday,Expenses,Food,Breakfast,50000,VND, bánh cuốn trứng với MHan để đi career day,2021-04-24
+352.0,2021-04-24,Saturday,Assets,Wallet,Cash,-50000,VND,,2021-04-24
+359.0,2021-04-25,Sunday,Expenses,Transportation,Ticket,350000,VND,,2021-04-25
+358.0,2021-04-25,Sunday,Assets,Wallet,Cash,-447000,VND,,2021-04-25
+357.0,2021-04-25,Sunday,Expenses,Food,Eating Out,62000,VND, ăn tối vs Minh Hân,2021-04-25
+360.0,2021-04-25,Sunday,Expenses,Food,Eating Out,25000,VND,,2021-04-25
+355.0,2021-04-25,Sunday,Assets,Card,ACB,-145000,VND,,2021-04-25
+354.0,2021-04-25,Sunday,Expenses,Food,Eating Out,115000,VND,,2021-04-25
+356.0,2021-04-25,Sunday,Expenses,Givings,Lottery,10000,VND,,2021-04-25
+353.0,2021-04-25,Sunday,Expenses,Food,Breakfast,30000,VND,,2021-04-25
+361.0,2021-04-27,Tuesday,Equity,Balance,Balancing,-186000,VND,,2021-04-27
+362.0,2021-04-27,Tuesday,Equity,Balance,Balancing,49000,VND,,2021-04-27
+363.0,2021-04-27,Tuesday,Assets,Wallet,Cash,-49000,VND,,2021-04-27
+364.0,2021-04-27,Tuesday,Expenses,Personal,Prepaid Phone,50000,VND,,2021-04-27
+365.0,2021-04-27,Tuesday,Assets,Card,ACB,136000,VND,,2021-04-27
+367.0,2021-04-28,Wednesday,Expenses,Drink,Coffee,26000,VND,,2021-04-28
+368.0,2021-04-28,Wednesday,Expenses,Food,Afternoon Snack,26000,VND,,2021-04-28
+369.0,2021-04-28,Wednesday,Assets,Card,ACB,-70000,VND,,2021-04-28
+366.0,2021-04-28,Wednesday,Expenses,Food,Breakfast,18000,VND,,2021-04-28
+372.0,2021-04-29,Thursday,Expenses,Transportation,Parking Fees,5000,VND,,2021-04-29
+373.0,2021-04-29,Thursday,Assets,Wallet,Cash,-5000,VND,,2021-04-29
+371.0,2021-04-29,Thursday,Assets,Card,ACB,-35000,VND,,2021-04-29
+370.0,2021-04-29,Thursday,Expenses,Food,Eating Out,35000,VND,,2021-04-29
+383.0,2021-04-30,Friday,Assets,eWallet,MOCA,-76000,VND,,2021-04-30
+382.0,2021-04-30,Friday,Expenses,Transportation,Grab,76000,VND,,2021-04-30
+380.0,2021-04-30,Friday,Expenses,Food,Afternoon Snack,16000,VND,,2021-04-30
+379.0,2021-04-30,Friday,Expenses,Food,Eating Out,74000,VND, ăn bún đậu vs MH,2021-04-30
+381.0,2021-04-30,Friday,Assets,Wallet,Cash,-90000,VND,,2021-04-30
+377.0,2021-04-30,Friday,Expenses,Fees,Transfer Fees,2200,VND,,2021-04-30
+376.0,2021-04-30,Friday,Assets,Card,ACB,-502200,VND,,2021-04-30
+375.0,2021-04-30,Friday,Income,Home,Parents,-280000,VND,,2021-04-30
+374.0,2021-04-30,Friday,Assets,Card,ACB,280000,VND,,2021-04-30
+378.0,2021-04-30,Friday,Assets,Wallet,Cash,500000,VND,,2021-04-30
+384.0,2021-05-01,Saturday,Expenses,Food,Dinner,34000,VND,,2021-05-01
+385.0,2021-05-01,Saturday,Expenses,Personal,Misc,6000,VND,,2021-05-01
+386.0,2021-05-01,Saturday,Assets,Wallet,Cash,-40000,VND,,2021-05-01
+387.0,2021-05-02,Sunday,Expenses,Health,Medicine,60000,VND,,2021-05-02
+388.0,2021-05-02,Sunday,Assets,Wallet,Cash,-60000,VND,,2021-05-02
+394.0,2021-05-03,Monday,Equity,Balance,Balancing,281000,VND, Wallet:Cash,2021-05-03
+393.0,2021-05-03,Monday,Assets,Card,ACB,26000,VND,,2021-05-03
+392.0,2021-05-03,Monday,Equity,Balance,Balancing,-26000,VND, acb,2021-05-03
+390.0,2021-05-03,Monday,Expenses,Personal,Haircut,20000,VND,,2021-05-03
+389.0,2021-05-03,Monday,Expenses,Personal,Misc,15000,VND,,2021-05-03
+391.0,2021-05-03,Monday,Assets,Wallet,Cash,-316000,VND,,2021-05-03
+396.0,2021-05-04,Tuesday,Expenses,Transportation,Parking Fees,5000,VND,,2021-05-04
+395.0,2021-05-04,Tuesday,Expenses,Transportation,Grab,100000,VND,,2021-05-04
+397.0,2021-05-04,Tuesday,Assets,Wallet,Cash,-105000,VND,,2021-05-04
+399.0,2021-05-04,Tuesday,Assets,Card,ACB,-100000,VND,,2021-05-04
+398.0,2021-05-04,Tuesday,Expenses,Personal,Hangout,100000,VND,,2021-05-04
+402.0,2021-05-05,Wednesday,Expenses,Food,Lunch,47000,VND,,2021-05-05
+403.0,2021-05-05,Wednesday,Assets,Wallet,Cash,-47000,VND,,2021-05-05
+401.0,2021-05-05,Wednesday,Assets,Card,ACB,2800000,VND,,2021-05-05
+400.0,2021-05-05,Wednesday,Income,Fulbright,Allowance,-2800000,VND,,2021-05-05
+404.0,2021-05-06,Thursday,Expenses,Transportation,Parking Fees,5000,VND,,2021-05-06
+405.0,2021-05-06,Thursday,Assets,Wallet,Cash,-5000,VND,,2021-05-06
+406.0,2021-05-07,Friday,Expenses,Food,Breakfast,28000,VND,,2021-05-07
+409.0,2021-05-07,Friday,Expenses,Food,Dinner,25000,VND,,2021-05-07
+407.0,2021-05-07,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-05-07
+408.0,2021-05-07,Friday,Assets,Wallet,Cash,-33000,VND,,2021-05-07
+410.0,2021-05-07,Friday,Assets,Card,ACB,-25000,VND,,2021-05-07
+415.0,2021-05-08,Saturday,Assets,Card,ACB,-502000,VND,,2021-05-08
+416.0,2021-05-08,Saturday,Saving,Fintech,Finhay,500000,VND,,2021-05-08
+414.0,2021-05-08,Saturday,Assets,Card,VISA,-11000,VND,,2021-05-08
+417.0,2021-05-08,Saturday,Expenses,Fees,Transfer Fees,2000,VND,,2021-05-08
+412.0,2021-05-08,Saturday,Assets,Card,ACB,-131000,VND,,2021-05-08
+413.0,2021-05-08,Saturday,Expenses,Fees,VISA Card Service,11000,VND,,2021-05-08
+411.0,2021-05-08,Saturday,Expenses,Personal,Hangout,131000,VND, dinner with LeKhoa at crescent mall,2021-05-08
+418.0,2021-05-09,Sunday,Expenses,Food,Breakfast,50000,VND,,2021-05-09
+419.0,2021-05-09,Sunday,Assets,Wallet,Cash,450000,VND,,2021-05-09
+420.0,2021-05-09,Sunday,Assets,Card,ACB,-501100,VND,,2021-05-09
+421.0,2021-05-09,Sunday,Expenses,Fees,Withdrawal Fees,1100,VND,,2021-05-09
+422.0,2021-05-10,Monday,Expenses,Food,Delivery,48500,VND,,2021-05-10
+423.0,2021-05-10,Monday,Assets,eWallet,MOCA,-48500,VND,,2021-05-10
+428.0,2021-05-11,Tuesday,Assets,Card,ACB,780000,VND,,2021-05-11
+426.0,2021-05-11,Tuesday,Assets,Card,ACB,-20000,VND,,2021-05-11
+427.0,2021-05-11,Tuesday,Income,Part-time Jobs,Lasluz,-780000,VND,,2021-05-11
+424.0,2021-05-11,Tuesday,Expenses,Drink,Coffee,15000,VND,,2021-05-11
+425.0,2021-05-11,Tuesday,Assets,Wallet,Cash,5000,VND,,2021-05-11
+430.0,2021-05-12,Wednesday,Assets,Wallet,Cash,-47000,VND,,2021-05-12
+429.0,2021-05-12,Wednesday,Expenses,Food,Lunch,47000,VND, kfc,2021-05-12
+432.0,2021-05-13,Thursday,Assets,Wallet,Cash,-56000,VND,,2021-05-13
+433.0,2021-05-13,Thursday,Expenses,Transportation,Parking Fees,5000,VND,,2021-05-13
+431.0,2021-05-13,Thursday,Expenses,Food,Lunch,51000,VND, kfc,2021-05-13
+438.0,2021-05-14,Friday,Expenses,Transportation,Parking Fees,5000,VND,,2021-05-14
+434.0,2021-05-14,Friday,Expenses,Food,Breakfast,29000,VND,,2021-05-14
+435.0,2021-05-14,Friday,Assets,Wallet,Cash,-108000,VND,,2021-05-14
+436.0,2021-05-14,Friday,Expenses,Food,Afternoon Snack,23000,VND,,2021-05-14
+437.0,2021-05-14,Friday,Expenses,Food,Lunch,51000,VND, kfc,2021-05-14
+439.0,2021-05-15,Saturday,Expenses,Drink,Milk,103000,VND,,2021-05-15
+440.0,2021-05-15,Saturday,Assets,Card,ACB,-103000,VND,,2021-05-15
+441.0,2021-05-16,Sunday,Expenses,Food,Lunch,87000,VND, kfc,2021-05-16
+442.0,2021-05-16,Sunday,Assets,Card,ACB,-87000,VND,,2021-05-16
+443.0,2021-05-17,Monday,Expenses,Food,Breakfast,29000,VND,,2021-05-17
+444.0,2021-05-17,Monday,Expenses,Food,Instant Noodles,60000,VND,,2021-05-17
+445.0,2021-05-17,Monday,Assets,Card,ACB,-89000,VND,,2021-05-17
+446.0,2021-05-17,Monday,Expenses,Transportation,Parking Fees,10000,VND,,2021-05-17
+447.0,2021-05-17,Monday,Expenses,Food,Rice,45000,VND,,2021-05-17
+448.0,2021-05-17,Monday,Assets,Wallet,Cash,-55000,VND,,2021-05-17
+449.0,2021-05-20,Thursday,Expenses,Food,Afternoon Snack,18000,VND, hotdog,2021-05-20
+450.0,2021-05-20,Thursday,Assets,Wallet,Cash,-18000,VND,,2021-05-20
+451.0,2021-05-21,Friday,Expenses,Food,Breakfast,18000,VND,,2021-05-21
+452.0,2021-05-21,Friday,Assets,Wallet,Cash,-18000,VND,,2021-05-21
+457.0,2021-05-23,Sunday,Assets,eWallet,MOCA,200000,VND,,2021-05-23
+456.0,2021-05-23,Sunday,Assets,Card,ACB,-200000,VND,,2021-05-23
+459.0,2021-05-23,Sunday,Expenses,Transportation,Grab,49000,VND,,2021-05-23
+454.0,2021-05-23,Sunday,Assets,Wallet,Cash,-10000,VND,,2021-05-23
+453.0,2021-05-23,Sunday,Expenses,Givings,Lottery,10000,VND,,2021-05-23
+455.0,2021-05-23,Sunday,Expenses,Food,Delivery,58500,VND,,2021-05-23
+460.0,2021-05-23,Sunday,Assets,eWallet,MOCA,-162500,VND,,2021-05-23
+458.0,2021-05-23,Sunday,Expenses,Transportation,Grab,55000,VND,,2021-05-23
+466.0,2021-05-24,Monday,Expenses,Food,Eating Out,40000,VND,,2021-05-24
+467.0,2021-05-24,Monday,Assets,Wallet,Cash,-80000,VND,,2021-05-24
+465.0,2021-05-24,Monday,Assets,Wallet,Cash,200000,VND,,2021-05-24
+468.0,2021-05-24,Monday,Assets,Card,ACB,40000,VND,,2021-05-24
+463.0,2021-05-24,Monday,Assets,Card,ACB,-201100,VND,,2021-05-24
+462.0,2021-05-24,Monday,Assets,Wallet,Cash,-50000,VND,,2021-05-24
+461.0,2021-05-24,Monday,Assets,Card,ACB,50000,VND,,2021-05-24
+464.0,2021-05-24,Monday,Expenses,Fees,Transfer Fees,1100,VND,,2021-05-24
+469.0,2021-05-26,Wednesday,Expenses,Personal,Shirt,240000,VND,,2021-05-26
+470.0,2021-05-26,Wednesday,Assets,Card,ACB,-240000,VND,,2021-05-26
+471.0,2021-05-27,Thursday,Expenses,Drink,Coffee,26000,VND,,2021-05-27
+472.0,2021-05-27,Thursday,Assets,Wallet,Cash,-26000,VND,,2021-05-27
+473.0,2021-05-27,Thursday,Expenses,Food,Lunch,30000,VND,,2021-05-27
+474.0,2021-05-27,Thursday,Assets,eWallet,MOCA,-30000,VND,,2021-05-27
+475.0,2021-05-28,Friday,Expenses,Food,Afternoon Snack,36000,VND,,2021-05-28
+476.0,2021-05-28,Friday,Expenses,Drink,Milk,70000,VND,,2021-05-28
+477.0,2021-05-28,Friday,Assets,Card,ACB,-106000,VND,,2021-05-28
+481.0,2021-05-29,Saturday,Expenses,Food,Lunch,98000,VND,,2021-05-29
+480.0,2021-05-29,Saturday,Assets,Wallet,Cash,-53000,VND,,2021-05-29
+482.0,2021-05-29,Saturday,Assets,eWallet,MOCA,-98000,VND,,2021-05-29
+479.0,2021-05-29,Saturday,Expenses,Food,Breakfast,18000,VND, hotdog,2021-05-29
+478.0,2021-05-29,Saturday,Expenses,Food,Afternoon Snack,35000,VND,,2021-05-29
+483.0,2021-05-30,Sunday,Expenses,Food,Instant Noodles,8000,VND,,2021-05-30
+484.0,2021-05-30,Sunday,Assets,Wallet,Cash,-8000,VND,,2021-05-30
+485.0,2021-05-30,Sunday,Expenses,Food,Eating Out,25000,VND,,2021-05-30
+486.0,2021-05-30,Sunday,Assets,Card,ACB,-25000,VND,,2021-05-30
+488.0,2021-05-31,Monday,Assets,eWallet,MOCA,200000,VND,,2021-05-31
+499.0,2021-05-31,Monday,Assets,Card,ACB,-79000,VND,,2021-05-31
+498.0,2021-05-31,Monday,Expenses,Food,Instant Noodles,16000,VND,,2021-05-31
+497.0,2021-05-31,Monday,Expenses,Drink,Milk,45000,VND,,2021-05-31
+496.0,2021-05-31,Monday,Expenses,Food,Afternoon Snack,18000,VND,,2021-05-31
+494.0,2021-05-31,Monday,Assets,Wallet,Cash,-346691,VND,,2021-05-31
+495.0,2021-05-31,Monday,Assets,eWallet,MOCA,37063,VND,,2021-05-31
+500.0,2021-05-31,Monday,Expenses,Personal,Online,161692,VND," hub usb 141,996k + gel handwash 58k",2021-05-31
+493.0,2021-05-31,Monday,Assets,Card,ACB,-420688,VND,,2021-05-31
+501.0,2021-05-31,Monday,Assets,Card,ACB,-161692,VND,,2021-05-31
+487.0,2021-05-31,Monday,Assets,Card,ACB,-200000,VND,,2021-05-31
+492.0,2021-05-31,Monday,Equity,Balance,Balancing,684316,VND,,2021-05-31
+491.0,2021-05-31,Monday,Assets,Card,ACB,-35000,VND,,2021-05-31
+490.0,2021-05-31,Monday,Expenses,Food,Eating Out,35000,VND,,2021-05-31
+489.0,2021-05-31,Monday,Expenses,Food,Delivery,46000,VND,,2021-05-31
+502.0,2021-06-01,Tuesday,Assets,Card,ACB,-301100,VND,,2021-06-01
+503.0,2021-06-01,Tuesday,Expenses,Fees,Transfer Fees,1100,VND,,2021-06-01
+504.0,2021-06-01,Tuesday,Expenses,Food,Breakfast,12000,VND,,2021-06-01
+505.0,2021-06-01,Tuesday,Expenses,Food,Rice,45000,VND,,2021-06-01
+506.0,2021-06-01,Tuesday,Assets,Wallet,Cash,243000,VND,,2021-06-01
+513.0,2021-06-05,Saturday,Assets,Card,ACB,-201100,VND,,2021-06-05
+514.0,2021-06-05,Saturday,Expenses,Fees,Transfer Fees,1100,VND,,2021-06-05
+512.0,2021-06-05,Saturday,Assets,Wallet,Cash,-50000,VND,,2021-06-05
+511.0,2021-06-05,Saturday,Expenses,Personal,Medicine,18000,VND,,2021-06-05
+508.0,2021-06-05,Saturday,Expenses,Food,Vegetable,85000,VND,,2021-06-05
+509.0,2021-06-05,Saturday,Expenses,Food,Breakfast,50000,VND,,2021-06-05
+507.0,2021-06-05,Saturday,Expenses,Food,Fruit,72000,VND,,2021-06-05
+510.0,2021-06-05,Saturday,Expenses,Food,Eggs,25000,VND,,2021-06-05
+519.0,2021-06-06,Sunday,Expenses,Food,Fruit,27492,VND,,2021-06-06
+517.0,2021-06-06,Sunday,Expenses,Food,Instant Noodles,75600,VND,,2021-06-06
+518.0,2021-06-06,Sunday,Expenses,Drink,Milk,72000,VND,,2021-06-06
+515.0,2021-06-06,Sunday,Expenses,Food,Rice,45000,VND,,2021-06-06
+520.0,2021-06-06,Sunday,Expenses,Food,Misc,24000,VND,,2021-06-06
+516.0,2021-06-06,Sunday,Assets,Wallet,Cash,-45000,VND,,2021-06-06
+521.0,2021-06-06,Sunday,Assets,Card,ACB,-199092,VND,,2021-06-06
+523.0,2021-06-11,Friday,Assets,eWallet,MOCA,-41000,VND,,2021-06-11
+522.0,2021-06-11,Friday,Expenses,Transportation,Delivery,41000,VND,,2021-06-11
+528.0,2021-06-12,Saturday,Assets,Wallet,Cash,-50000,VND,,2021-06-12
+524.0,2021-06-12,Saturday,Expenses,Food,Lunch,27000,VND,,2021-06-12
+525.0,2021-06-12,Saturday,Assets,eWallet,MOCA,-27000,VND,,2021-06-12
+526.0,2021-06-12,Saturday,Expenses,Food,Dinner,46000,VND,,2021-06-12
+527.0,2021-06-12,Saturday,Assets,Wallet,Cash,-46000,VND,,2021-06-12
+529.0,2021-06-12,Saturday,Assets,Card,ACB,50000,VND,,2021-06-12
+532.0,2021-06-13,Sunday,Assets,eWallet,MOCA,-119000,VND,,2021-06-13
+530.0,2021-06-13,Sunday,Expenses,Food,Delivery,55000,VND,,2021-06-13
+531.0,2021-06-13,Sunday,Expenses,Transportation,Delivery,64000,VND,,2021-06-13
+534.0,2021-06-13,Sunday,Assets,Card,ACB,-70000,VND,,2021-06-13
+533.0,2021-06-13,Sunday,Expenses,Food,Breakfast,70000,VND,,2021-06-13
+538.0,2021-06-14,Monday,Assets,Card,ACB,-17000,VND,,2021-06-14
+537.0,2021-06-14,Monday,Expenses,Food,Afternoon Snack,17000,VND,,2021-06-14
+535.0,2021-06-14,Monday,Expenses,Food,Breakfast,27000,VND,,2021-06-14
+536.0,2021-06-14,Monday,Assets,Wallet,Cash,-27000,VND,,2021-06-14
+539.0,2021-06-15,Tuesday,Expenses,Food,Breakfast,27000,VND,,2021-06-15
+540.0,2021-06-15,Tuesday,Assets,Wallet,Cash,-27000,VND,,2021-06-15
+542.0,2021-06-16,Wednesday,Expenses,Food,Lunch,35000,VND,,2021-06-16
+541.0,2021-06-16,Wednesday,Expenses,Food,Breakfast,17000,VND,,2021-06-16
+543.0,2021-06-16,Wednesday,Expenses,Food,Afternoon Snack,10000,VND,,2021-06-16
+544.0,2021-06-16,Wednesday,Assets,Card,ACB,-62000,VND,,2021-06-16
+548.0,2021-06-17,Thursday,Income,Home,Parents,2500000,VND,,2021-06-17
+549.0,2021-06-17,Thursday,Saving,Fintech,Finhay,-2500000,VND,,2021-06-17
+547.0,2021-06-17,Thursday,Assets,Card,ACB,-57000,VND,,2021-06-17
+545.0,2021-06-17,Thursday,Expenses,Food,Lunch,35000,VND,,2021-06-17
+550.0,2021-06-17,Thursday,Expenses,Fees,Transfer Fees,10000,VND,,2021-06-17
+546.0,2021-06-17,Thursday,Expenses,Food,Afternoon Snack,12000,VND,,2021-06-17
+551.0,2021-06-18,Friday,Expenses,Food,Lunch,34000,VND,,2021-06-18
+552.0,2021-06-18,Friday,Expenses,Food,Afternoon Snack,12000,VND,,2021-06-18
+553.0,2021-06-18,Friday,Assets,Card,ACB,-46000,VND,,2021-06-18
+554.0,2021-06-19,Saturday,Expenses,Food,Breakfast,50000,VND,,2021-06-19
+556.0,2021-06-19,Saturday,Assets,Card,ACB,-96000,VND,,2021-06-19
+555.0,2021-06-19,Saturday,Expenses,Food,Fruit,46000,VND,,2021-06-19
+557.0,2021-06-21,Monday,Expenses,Personal,Misc,10000,VND,,2021-06-21
+558.0,2021-06-21,Monday,Assets,Card,ACB,-10000,VND,,2021-06-21
+562.0,2021-06-23,Wednesday,Assets,Card,ACB,-562000,VND,,2021-06-23
+561.0,2021-06-23,Wednesday,Expenses,Personal,Housing,2515000,VND,,2021-06-23
+559.0,2021-06-23,Wednesday,Expenses,Drink,Strongbow,47000,VND,,2021-06-23
+560.0,2021-06-23,Wednesday,Income,Home,Parents,-2000000,VND,,2021-06-23
+563.0,2021-06-24,Thursday,Expenses,Food,Lunch,34000,VND,,2021-06-24
+564.0,2021-06-24,Thursday,Assets,Card,ACB,-34000,VND,,2021-06-24
+565.0,2021-06-24,Thursday,Expenses,Transportation,Gas,50000,VND,,2021-06-24
+566.0,2021-06-24,Thursday,Expenses,Givings,Lottery,10000,VND,,2021-06-24
+567.0,2021-06-24,Thursday,Assets,Wallet,Cash,-60000,VND,,2021-06-24
+570.0,2021-06-25,Friday,Assets,Card,ACB,-56000,VND,,2021-06-25
+569.0,2021-06-25,Friday,Expenses,Food,Afternoon Snack,16000,VND,,2021-06-25
+572.0,2021-06-25,Friday,Assets,Wallet,Cash,-10000,VND,,2021-06-25
+568.0,2021-06-25,Friday,Expenses,Food,Lunch,40000,VND,,2021-06-25
+571.0,2021-06-25,Friday,Expenses,Givings,Lottery,10000,VND,,2021-06-25
+587.0,2021-06-26,Saturday,Assets,eWallet,MOCA,-100000,VND,,2021-06-26
+588.0,2021-06-26,Saturday,Expenses,Transportation,Delivery,41000,VND,,2021-06-26
+589.0,2021-06-26,Saturday,Assets,Card,ACB,-41000,VND,,2021-06-26
+584.0,2021-06-26,Saturday,Assets,Wallet,Cash,-10000,VND,,2021-06-26
+585.0,2021-06-26,Saturday,Expenses,Transportation,Grab,59000,VND,,2021-06-26
+586.0,2021-06-26,Saturday,Expenses,Transportation,Delivery,41000,VND,,2021-06-26
+583.0,2021-06-26,Saturday,Expenses,Givings,Lottery,10000,VND,,2021-06-26
+581.0,2021-06-26,Saturday,Assets,Card,VISA,-1500000,VND,,2021-06-26
+582.0,2021-06-26,Saturday,Assets,Wallet,Cash,1500000,VND,,2021-06-26
+576.0,2021-06-26,Saturday,Assets,Card,ACB,-450000,VND,,2021-06-26
+575.0,2021-06-26,Saturday,Expenses,Transportation,Parking Fees,450000,VND,,2021-06-26
+574.0,2021-06-26,Saturday,Assets,Wallet,Cash,-14000,VND,,2021-06-26
+573.0,2021-06-26,Saturday,Expenses,Drink,Milk,14000,VND,,2021-06-26
+579.0,2021-06-26,Saturday,Expenses,Personal,Misc,50000,VND, khau trang,2021-06-26
+578.0,2021-06-26,Saturday,Assets,Card,ACB,-50000,VND,,2021-06-26
+577.0,2021-06-26,Saturday,Expenses,Food,Lunch,50000,VND,,2021-06-26
+580.0,2021-06-26,Saturday,Assets,Wallet,Cash,-50000,VND,,2021-06-26
+593.0,2021-06-27,Sunday,Assets,eWallet,MOCA,-69000,VND,,2021-06-27
+598.0,2021-06-27,Sunday,Expenses,Personal,Misc,364900,VND," ban chai. kem danh rang, khan tam, snack, pin , sandwich, nuoc",2021-06-27
+596.0,2021-06-27,Sunday,Expenses,Transportation,Grab,150000,VND,,2021-06-27
+597.0,2021-06-27,Sunday,Assets,Wallet,Cash,-150000,VND,,2021-06-27
+595.0,2021-06-27,Sunday,Assets,Wallet,Cash,-5000,VND,,2021-06-27
+591.0,2021-06-27,Sunday,Assets,Card,ACB,-55000,VND,,2021-06-27
+592.0,2021-06-27,Sunday,Expenses,Transportation,Grab,69000,VND, ra san bay,2021-06-27
+599.0,2021-06-27,Sunday,Assets,Card,VISA,-364900,VND,,2021-06-27
+590.0,2021-06-27,Sunday,Expenses,Food,Breakfast,55000,VND,,2021-06-27
+594.0,2021-06-27,Sunday,Expenses,Drink,Water,5000,VND,,2021-06-27
+609.0,2021-06-28,Monday,Assets,Card,ACB,-100000,VND,,2021-06-28
+607.0,2021-06-28,Monday,Assets,Wallet,Cash,-25000,VND,,2021-06-28
+606.0,2021-06-28,Monday,Expenses,Drink,Water,25000,VND,,2021-06-28
+608.0,2021-06-28,Monday,Expenses,Personal,Mobile Phone,100000,VND,,2021-06-28
+602.0,2021-06-28,Monday,Expenses,Food,Lunch,38000,VND,,2021-06-28
+604.0,2021-06-28,Monday,Expenses,Transportation,Grab,49000,VND,,2021-06-28
+605.0,2021-06-28,Monday,Assets,eWallet,MOCA,-49000,VND,,2021-06-28
+600.0,2021-06-28,Monday,Expenses,Personal,Misc,207813,VND," tao, trung ga, probi, nuoc muoi, sua",2021-06-28
+601.0,2021-06-28,Monday,Assets,Card,VISA,-207813,VND,,2021-06-28
+603.0,2021-06-28,Monday,Assets,eWallet,MOCA,-38000,VND,,2021-06-28
+611.0,2021-06-29,Tuesday,Assets,Wallet,Cash,-35000,VND,,2021-06-29
+610.0,2021-06-29,Tuesday,Expenses,Food,Dinner,35000,VND,,2021-06-29
+612.0,2021-06-29,Tuesday,Expenses,Food,Lunch,39000,VND,,2021-06-29
+613.0,2021-06-29,Tuesday,Assets,Wallet,Cash,-39000,VND,,2021-06-29
+614.0,2021-06-30,Wednesday,Expenses,Food,Lunch,40000,VND,,2021-06-30
+615.0,2021-06-30,Wednesday,Expenses,Food,Vegetable,75000,VND,,2021-06-30
+616.0,2021-06-30,Wednesday,Expenses,Food,Dinner,59000,VND,,2021-06-30
+617.0,2021-06-30,Wednesday,Assets,Wallet,Cash,-174000,VND,,2021-06-30
+625.0,2021-07-01,Thursday,Expenses,Personal,Misc,15000,VND,,2021-07-01
+623.0,2021-07-01,Thursday,Assets,Wallet,Cash,-61000,VND,,2021-07-01
+624.0,2021-07-01,Thursday,Expenses,Drink,Drink,10000,VND, nuoc mia,2021-07-01
+627.0,2021-07-01,Thursday,Assets,Wallet,Cash,-35000,VND,,2021-07-01
+626.0,2021-07-01,Thursday,Expenses,Drink,Water,10000,VND,,2021-07-01
+620.0,2021-07-01,Thursday,Expenses,Food,Lunch,41000,VND,,2021-07-01
+618.0,2021-07-01,Thursday,Expenses,Food,Breakfast,15000,VND,,2021-07-01
+622.0,2021-07-01,Thursday,Expenses,Food,Dinner,61000,VND,,2021-07-01
+619.0,2021-07-01,Thursday,Assets,Wallet,Cash,-15000,VND,,2021-07-01
+621.0,2021-07-01,Thursday,Assets,eWallet,MOCA,-41000,VND,,2021-07-01
+641.0,2021-07-02,Friday,Assets,Card,ACB,2363636,VND,,2021-07-02
+635.0,2021-07-02,Friday,Assets,eWallet,MOCA,-5000,VND,,2021-07-02
+628.0,2021-07-02,Friday,Expenses,Food,Sandwich,12000,VND,,2021-07-02
+637.0,2021-07-02,Friday,Assets,Card,VISA,-471808,VND,----------,2021-07-02
+640.0,2021-07-02,Friday,Income,Internship,FFI,-2363636,VND,,2021-07-02
+636.0,2021-07-02,Friday,Expenses,Education,Online Course,471808,VND,,2021-07-02
+639.0,2021-07-02,Friday,Assets,eWallet,MOCA,300000,VND,,2021-07-02
+631.0,2021-07-02,Friday,Assets,Wallet,Cash,-110000,VND,,2021-07-02
+632.0,2021-07-02,Friday,Expenses,Transportation,Grab,18000,VND,,2021-07-02
+630.0,2021-07-02,Friday,Expenses,Food,Dinner,45000,VND,,2021-07-02
+629.0,2021-07-02,Friday,Expenses,Food,Lunch,53000,VND,,2021-07-02
+634.0,2021-07-02,Friday,Expenses,Transportation,Tips,5000,VND,,2021-07-02
+633.0,2021-07-02,Friday,Assets,eWallet,MOCA,-18000,VND,,2021-07-02
+638.0,2021-07-02,Friday,Assets,Card,ACB,-300000,VND,,2021-07-02
+643.0,2021-07-03,Saturday,Assets,Card,ACB,-36500,VND,,2021-07-03
+645.0,2021-07-03,Saturday,Assets,Card,ACB,-266974,VND,,2021-07-03
+644.0,2021-07-03,Saturday,Expenses,Personal,Housing,266974,VND,,2021-07-03
+646.0,2021-07-03,Saturday,Expenses,Food,Dinner,41500,VND,,2021-07-03
+649.0,2021-07-03,Saturday,Assets,Card,VISA,2000000,VND,,2021-07-03
+648.0,2021-07-03,Saturday,Income,Home,Parents,-2000000,VND,,2021-07-03
+642.0,2021-07-03,Saturday,Expenses,Food,Lunch,36500,VND,,2021-07-03
+647.0,2021-07-03,Saturday,Assets,Card,ACB,-41500,VND,,2021-07-03
+650.0,2021-07-04,Sunday,Expenses,Personal,Housing,226000,VND,,2021-07-04
+651.0,2021-07-04,Sunday,Expenses,Food,Rice,27000,VND,,2021-07-04
+652.0,2021-07-04,Sunday,Expenses,Personal,Housing,229000,VND,,2021-07-04
+653.0,2021-07-04,Sunday,Assets,Card,ACB,-482000,VND,,2021-07-04
+663.0,2021-07-05,Monday,Assets,Wallet,Cash,-30000,VND,,2021-07-05
+661.0,2021-07-05,Monday,Expenses,Food,Dinner,20000,VND,,2021-07-05
+659.0,2021-07-05,Monday,Expenses,Personal,Misc,63000,VND,,2021-07-05
+662.0,2021-07-05,Monday,Expenses,Drink,Drink,10000,VND,,2021-07-05
+660.0,2021-07-05,Monday,Assets,Card,ACB,-285748,VND,,2021-07-05
+654.0,2021-07-05,Monday,Expenses,Food,Meat,39960,VND,,2021-07-05
+657.0,2021-07-05,Monday,Expenses,Food,Bread,23000,VND,,2021-07-05
+655.0,2021-07-05,Monday,Expenses,Food,Vegetables,52788,VND,,2021-07-05
+658.0,2021-07-05,Monday,Expenses,Drink,Strongbow,37000,VND,,2021-07-05
+656.0,2021-07-05,Monday,Expenses,Drink,Milk,70000,VND,,2021-07-05
+670.0,2021-07-07,Wednesday,Assets,Wallet,Cash,100000,VND,,2021-07-07
+668.0,2021-07-07,Wednesday,Expenses,Food,Vegetable,20000,VND,,2021-07-07
+666.0,2021-07-07,Wednesday,Expenses,Food,Fish,29900,VND,,2021-07-07
+665.0,2021-07-07,Wednesday,Expenses,Food,Fish,63250,VND,,2021-07-07
+664.0,2021-07-07,Wednesday,Expenses,Food,Fruit,21373,VND,,2021-07-07
+669.0,2021-07-07,Wednesday,Expenses,Food,Meat,90000,VND,,2021-07-07
+671.0,2021-07-07,Wednesday,Assets,Wallet,Cash,-70000,VND,,2021-07-07
+667.0,2021-07-07,Wednesday,Assets,Card,VISA,-254523,VND,,2021-07-07
+675.0,2021-07-09,Friday,Assets,Wallet,Cash,-33000,VND,,2021-07-09
+674.0,2021-07-09,Friday,Expenses,Food,Fruit,33000,VND,,2021-07-09
+677.0,2021-07-09,Friday,Assets,Card,ACB,-40750,VND,,2021-07-09
+676.0,2021-07-09,Friday,Expenses,Food,Dinner,40750,VND,,2021-07-09
+673.0,2021-07-09,Friday,Assets,Card,VISA,-52000,VND,,2021-07-09
+672.0,2021-07-09,Friday,Expenses,Food,Rice,52000,VND,,2021-07-09
+679.0,2021-07-12,Monday,Assets,Card,ACB,-64750,VND,,2021-07-12
+678.0,2021-07-12,Monday,Expenses,Personal,Housing,64750,VND,,2021-07-12
+685.0,2021-07-14,Wednesday,Expenses,Food,Fruit,12582,VND,,2021-07-14
+681.0,2021-07-14,Wednesday,Expenses,Food,Dinner,50000,VND,,2021-07-14
+687.0,2021-07-14,Wednesday,Expenses,Food,Eggs,27500,VND,,2021-07-14
+688.0,2021-07-14,Wednesday,Expenses,Food,probi,25000,VND,,2021-07-14
+690.0,2021-07-14,Wednesday,Expenses,Food,Condensed Milk,15000,VND,,2021-07-14
+692.0,2021-07-14,Wednesday,Assets,Card,VISA,-422523,VND,,2021-07-14
+683.0,2021-07-14,Wednesday,Expenses,Food,Meat,198671,VND,,2021-07-14
+680.0,2021-07-14,Wednesday,Expenses,Food,Lunch,66000,VND,,2021-07-14
+686.0,2021-07-14,Wednesday,Expenses,Food,Milk,64500,VND,,2021-07-14
+689.0,2021-07-14,Wednesday,Expenses,Food,Snack,25000,VND,,2021-07-14
+684.0,2021-07-14,Wednesday,Expenses,Food,Vegetables,19270,VND,,2021-07-14
+682.0,2021-07-14,Wednesday,Assets,eWallet,MOCA,-116000,VND,,2021-07-14
+691.0,2021-07-14,Wednesday,Expenses,Food,Sandwich,35000,VND,,2021-07-14
+697.0,2021-07-15,Thursday,Assets,Card,ACB,-189400,VND,,2021-07-15
+695.0,2021-07-15,Thursday,Expenses,Education,Books,94900,VND,,2021-07-15
+694.0,2021-07-15,Thursday,Assets,Card,ACB,-55000,VND,,2021-07-15
+696.0,2021-07-15,Thursday,Expenses,Personal,Housing,94500,VND,,2021-07-15
+693.0,2021-07-15,Thursday,Expenses,Food,Lunch,55000,VND,,2021-07-15
+699.0,2021-07-17,Saturday,Expenses,Fees,Transfer Fees,9999,VND,,2021-07-17
+700.0,2021-07-17,Saturday,Assets,Wallet,Cash,1100000,VND,,2021-07-17
+698.0,2021-07-17,Saturday,Assets,Card,VISA,-1109999,VND,,2021-07-17
+702.0,2021-07-17,Saturday,Expenses,Food,Fruit,18000,VND,,2021-07-17
+701.0,2021-07-17,Saturday,Expenses,Food,Vegetables,33000,VND,,2021-07-17
+703.0,2021-07-17,Saturday,Assets,Wallet,Cash,-51000,VND,,2021-07-17
+708.0,2021-07-19,Monday,Expenses,Food,Lunch,55000,VND,,2021-07-19
+707.0,2021-07-19,Monday,Expenses,Food,Vegetables,60000,VND,,2021-07-19
+706.0,2021-07-19,Monday,Expenses,Food,Meat,275000,VND,,2021-07-19
+705.0,2021-07-19,Monday,Assets,Wallet,Cash,-402000,VND,,2021-07-19
+704.0,2021-07-19,Monday,Expenses,Food,Breakfast,12000,VND,,2021-07-19
+710.0,2021-07-20,Tuesday,Assets,Card,VISA,-909999,VND,,2021-07-20
+709.0,2021-07-20,Tuesday,Expenses,Food,Breakfast,15000,VND,,2021-07-20
+712.0,2021-07-20,Tuesday,Expenses,Fees,Transfer Fees,9999,VND,,2021-07-20
+711.0,2021-07-20,Tuesday,Assets,Wallet,Cash,885000,VND,,2021-07-20
+713.0,2021-07-21,Wednesday,Expenses,Personal,Housing,2200000,VND,,2021-07-21
+714.0,2021-07-21,Wednesday,Income,Home,Parents,-1941000,VND,,2021-07-21
+715.0,2021-07-21,Wednesday,Assets,Card,ACB,-259000,VND,,2021-07-21
+716.0,2021-07-23,Friday,Income,Internship,FFI,-4000000,VND,,2021-07-23
+718.0,2021-07-23,Friday,Expenses,Transportation,Grab,117000,VND,,2021-07-23
+719.0,2021-07-23,Friday,Assets,Card,ACB,-117000,VND,,2021-07-23
+717.0,2021-07-23,Friday,Assets,Card,ACB,4000000,VND,,2021-07-23
+720.0,2021-08-11,Wednesday,Expenses,Givings,Conservation,113869,VND, phim shaba vs Hanie <3,2021-08-11
+721.0,2021-08-11,Wednesday,Assets,Card,ACB,-113869,VND,,2021-08-11
+723.0,2021-08-21,Saturday,Assets,Wallet,Cash,-30000,VND,,2021-08-21
+722.0,2021-08-21,Saturday,Expenses,Personal,Misc,30000,VND, battery,2021-08-21
+724.0,2021-08-23,Monday,Expenses,Personal, Study group fine,40000,VND,,2021-08-23
+725.0,2021-08-23,Monday,Assets,Card,ACB,-40000,VND,,2021-08-23
+726.0,2021-08-25,Wednesday,Income,Internship,FFI,-4000000,VND,,2021-08-25
+727.0,2021-08-25,Wednesday,Assets,Card,ACB,4000000,VND,,2021-08-25
+729.0,2021-08-26,Thursday,Assets,Card,ACB,-1000000,VND,,2021-08-26
+728.0,2021-08-26,Thursday,Saving,Fintech,Finhay,1000000,VND,,2021-08-26
+730.0,2021-09-02,Thursday,Expenses,Education,Colab Pro,234297,VND,,2021-09-02
+731.0,2021-09-02,Thursday,Assets,Card,ACB,-234297,VND,,2021-09-02
+,2021-10-05,Tuesday,Assets,Wallet,Cash,-20000,VND,None,2021-10-05
+,2021-10-05,Tuesday,Expenses,Givings,Lottery,20000,VND,None,2021-10-05
+733.0,2021-10-08,Friday,Assets,Card,ACB,2545454,VND,,2021-10-08
+732.0,2021-10-08,Friday,Income,Internship,FFI,-2545454,VND,,2021-10-08
+735.0,2021-10-10,Sunday,Expenses,Fees,Withdrawal Fees,10000,VND,,2021-10-10
+736.0,2021-10-10,Sunday,Saving,Fintech,Finhay,3000000,VND,,2021-10-10
+734.0,2021-10-10,Sunday,Assets,Card,ACB,-3010000,VND,,2021-10-10
+,2021-10-14,Thursday,Expenses,Food,Breakfast,12000,VND,an sang,2021-10-14
+,2021-10-14,Thursday,Expenses,All,All,12,VND,,2021-10-14
+,2021-10-14,Thursday,Assets,Wallet,Cash,-12000,VND,an sang,2021-10-14
+,2021-10-15,Friday,Assets,Wallet,Cash,-12000,VND,,2021-10-15
+,2021-10-15,Friday,Expenses,Food,Delivery,55000,VND,,2021-10-15
+,2021-10-15,Friday,Expenses,Food,Breakfast,20000,VND,,2021-10-15
+,2021-10-15,Friday,Assets,eWallet,MOCA,-55000,VND,,2021-10-15
+,2021-10-15,Friday,Expenses,Drink,Soda,12000,VND,,2021-10-15
+,2021-10-15,Friday,Assets,Wallet,Cash,-20000,VND,,2021-10-15
