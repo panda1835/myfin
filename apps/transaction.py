@@ -11,6 +11,7 @@ from app import app
 
 import create_plot
 import utils
+import utils_plotly
 import init_database
 
 df = init_database.init_database()
@@ -18,213 +19,88 @@ df = init_database.init_database()
 layout = html.Div([
     html.Div([
         html.H1("Culmulative Expenses in Month"),
-        html.Div([
-            dcc.Dropdown(
-                id="month_cumulative",
-                options=[{"label": 'January'  , "value": '01'},
-                            {"label": 'February' , "value": '02'},
-                            {"label": 'March'    , "value": '03'},
-                            {"label": 'April'    , "value": '04'},
-                            {"label": 'May'      , "value": '05'},
-                            {"label": 'June'     , "value": '06'},
-                            {"label": 'July'     , "value": '07'},
-                            {"label": 'August'   , "value": '08'},
-                            {"label": 'September', "value": '09'},
-                            {"label": 'October'  , "value": '10'},
-                            {"label": 'November' , "value": '11'},
-                            {"label": 'December' , "value": '12'}],
-                value=utils.today_month,
-                clearable=False
-            ),
-        ], style={'width': '18%', 'display': 'inline-block'}),
-
-        html.Div([
-            dcc.Dropdown(
-                id="year_cumulative",
-                options=[{"label": i, "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                value=utils.today_year,
-                clearable=False
-            ),
-        ], style={'width': '10%', 'display': 'inline-block'}),             
-
+        html.Div(
+            utils_plotly.month_year_dropdown(
+                {
+                    "id_month": "month_cumulative",
+                    "id_year": "year_cumulative"
+                },
+                {
+                    "value_month": utils.today_month,
+                    "value_year": utils.today_year
+                }
+            )
+        ),           
         dcc.Graph(id='cumulative_monthly_expenses')
     ], style={'width': '48%', 'display': 'inline-block'}),
 
     html.Div([
         html.H1("Daily Expenses in Month"),
-            html.Div([
-                dcc.Dropdown(
-                    id="month_daily",
-                    options=[{"label": 'January'  , "value": '01'},
-                                {"label": 'February' , "value": '02'},
-                                {"label": 'March'    , "value": '03'},
-                                {"label": 'April'    , "value": '04'},
-                                {"label": 'May'      , "value": '05'},
-                                {"label": 'June'     , "value": '06'},
-                                {"label": 'July'     , "value": '07'},
-                                {"label": 'August'   , "value": '08'},
-                                {"label": 'September', "value": '09'},
-                                {"label": 'October'  , "value": '10'},
-                                {"label": 'November' , "value": '11'},
-                                {"label": 'December' , "value": '12'}],
-                    value=utils.today_month,
-                    clearable=False
-                ),
-            ], style={'width': '18%', 'display': 'inline-block'}),
-
-            html.Div([
-                dcc.Dropdown(
-                    id="year_daily",
-                    options=[{"label": i, "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                    value=utils.today_year,
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block'}),             
-
-            dcc.Graph(id='daily_expenses')
+        html.Div(
+            utils_plotly.month_year_dropdown(
+                {
+                    "id_month": "month_daily",
+                    "id_year": "year_daily"
+                },
+                {
+                    "value_month": utils.today_month,
+                    "value_year": utils.today_year
+                }
+            )
+        ),           
+        dcc.Graph(id='daily_expenses')
     ], style={'width': '48%', 'display': 'inline-block'}),
 
     html.Div([
         html.H1("Transaction History"),
-        
-        # ---------
-        html.Div([
-            html.Div("From", 
-                        style={'width': '10%', 
-                            'height':'50%',
-                            'display': 'block',
-                        }),
-
-            html.Div([
-                dcc.Dropdown(
-                    id="start-date-transaction",
-                    options=[{"label": str(i).zfill(2), "value": str(i).zfill(2)} for i in range(1, 32)],
-                    value=utils.today_date.zfill(2),
-                    clearable=False
-                ),
-            ], style={'width': '20%', 'display': 'inline-block'}),
-
-            html.Div([
-                dcc.Dropdown(
-                    id="start-month-transaction",
-                    options=[{"label": 'January'  , "value": '01'},
-                                {"label": 'February' , "value": '02'},
-                                {"label": 'March'    , "value": '03'},
-                                {"label": 'April'    , "value": '04'},
-                                {"label": 'May'      , "value": '05'},
-                                {"label": 'June'     , "value": '06'},
-                                {"label": 'July'     , "value": '07'},
-                                {"label": 'August'   , "value": '08'},
-                                {"label": 'September', "value": '09'},
-                                {"label": 'October'  , "value": '10'},
-                                {"label": 'November' , "value": '11'},
-                                {"label": 'December' , "value": '12'}],
-                    value=utils.today_month,
-                    clearable=False
-                ),
-            ], style={'width': '35%', 'display': 'inline-block'}),
-
-            html.Div([
-                dcc.Dropdown(
-                    id="start-year-transaction",
-                    options=[{"label": i  , "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                    value=utils.today_year,
-                    clearable=False
-                ),
-            ], style={'width': '20%', 'display': 'inline-block'})
-        ], style={'width': '25%', 'display': 'inline-block'}),
-        #----------
-        
-        html.Div([
-            html.Div("To", 
-                            style={'width': '10%', 
-                                'height':'50%',
-                                'display': 'block',
-                            }),
-            html.Div([
-                dcc.Dropdown(
-                    id="end-date-transaction",
-                    options=[{"label": str(i).zfill(2), "value": str(i).zfill(2)} for i in range(1, 32)],
-                    value=utils.today_date,
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block'}),
-
-            html.Div([
-                dcc.Dropdown(
-                    id="end-month-transaction",
-                    options=[{"label": 'January'  , "value": '01'},
-                                {"label": 'February' , "value": '02'},
-                                {"label": 'March'    , "value": '03'},
-                                {"label": 'April'    , "value": '04'},
-                                {"label": 'May'      , "value": '05'},
-                                {"label": 'June'     , "value": '06'},
-                                {"label": 'July'     , "value": '07'},
-                                {"label": 'August'   , "value": '08'},
-                                {"label": 'September', "value": '09'},
-                                {"label": 'October'  , "value": '10'},
-                                {"label": 'November' , "value": '11'},
-                                {"label": 'December' , "value": '12'}],
-                    value=utils.today_month,
-                    clearable=False
-                ),
-            ], style={'width': '18%', 'display': 'inline-block'}),
-            
-            html.Div([
-                dcc.Dropdown(
-                    id="end-year-transaction",
-                    options=[{"label": i  , "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                    value=utils.first_day_year,
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block'})
-        ], style={'width': '50%', 'display': 'inline-block'}),
+        #---------- From ---------
+        html.Div(
+            utils_plotly.date_month_year_dropdown(
+                "From",
+                {
+                    "id_date": "start-date-transaction",
+                    "id_month": "start-month-transaction",
+                    "id_year": "start-year-transaction"
+                },
+                {
+                    "value_date": utils.first_day_date.zfill(2),
+                    "value_month": utils.first_day_month,
+                    "value_year": utils.first_day_year,
+                }
+            ), style={'width': '50%', 'display': 'inline-block'}
+        ),
+        #---------- To ---------
+        html.Div(
+            utils_plotly.date_month_year_dropdown(
+                "To",
+                {
+                    "id_date": "end-date-transaction",
+                    "id_month": "end-month-transaction",
+                    "id_year": "end-year-transaction",
+                },
+                {
+                    "value_date": utils.today_date,
+                    "value_month": utils.today_month,
+                    "value_year": utils.today_year,
+                }
+            ), style={'width': '50%', 'display': 'inline-block'}
+        ),
         # ---------             
 
-        html.Div([
-            html.Div([
-                html.Div("Type", 
-                        style={'width': '10%', 
-                            'height':'50%',
-                            'display': 'block',
-                        }),
-                
-                dcc.Dropdown(
-                    id="transaction-type-filter",
-                    options=[{"label": i, "value": i} for i in utils.transaction_list],
-                    value='Expenses',
-                    clearable=False
-                ),
-            ], style={'width': '8%', 'display': 'inline-block'}),
-
-            html.Div([
-                html.Div("Category", 
-                        style={'width': '10%', 
-                            'height':'50%',
-                            'display': 'block',
-                        }),
-                
-                dcc.Dropdown(
-                    id="transaction-category-filter",
-                    value='All',
-                    clearable=False
-                ),
-            ], style={'width': '11%', 'display': 'inline-block'}),
-
-            html.Div([
-                
-                html.Div("Sub-category", 
-                        style={
-                            'display': 'block',
-                        }),
-                
-                dcc.Dropdown(
-                    id="transaction-sub-category-filter",
-                    value='All',
-                    clearable=False
-                ),
-            ], style={'width': '12%', 'display': 'inline-block'})
-        ], style={'display': 'block'}),
+        html.Div(
+            utils_plotly.type_category_subcategory_dropdown(
+                {
+                    "id_type": "transaction-type-filter",
+                    "id_category": "transaction-category-filter",
+                    "id_subcategory": "transaction-sub-category-filter",
+                },
+                {
+                    "value_type": 'Expenses',
+                    "value_category": 'All',
+                    "value_subcategory": 'All',
+                }
+            ), style={'width': '50%', 'display': 'inline-block'}
+        ),
         
         # --------
         
