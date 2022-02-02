@@ -1,11 +1,35 @@
-import pandas as pd                       #to perform data manipulation and analysis
-import numpy as np                        #to cleanse data
-from dash import dash_table
+import pandas as pd
+import numpy as np
+import json
 
-database_name = 'transaction.csv'
+with open('data.json','r') as f:
+    data = json.load(f)
+    database_name = data['constant']['DATABASE_NAME']
 
-def init_database():
+def init_database(database_name=database_name):
     df = pd.read_csv(database_name)
+
+    # remove '?' column
+    df.drop(columns=['?'], inplace=True)
+    df.drop(columns=['pending/cleared'], inplace=True)
+
+
+    # seprarate account into categories
+    transaction_type = []
+    category = []
+    sub_category = [] 
+
+    for i in df['account']:
+        transaction_type.append(i.split(':')[0])    
+        category.append(i.split(':')[1])
+        try:
+            sub_category.append(i.split(':')[2])
+        except:
+            print(i)
+
+    df['transaction_type'] = transaction_type
+    df['category'] = category
+    df['sub_category'] = sub_category
 
     # add month column
     df['date'] = df['date'].str.replace('/', '-')
@@ -16,12 +40,4 @@ def init_database():
 
     return df
 
-display_columns = ['date', 
-                'date_of_week', 
-                'transaction_type', 
-                'category', 
-                'sub_category',
-                'amount', 
-                'currency', 
-                'note']
 
