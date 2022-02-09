@@ -368,21 +368,14 @@ def update_entry_table(n_clicks_add, rows_add,
     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
 
 
-# refresh entry (amount) after saving
+# refresh entry amount and note after saving
 @app.callback(
-    Output('entry-amount', 'value'),
+    [Output('entry-amount', 'value'),
+    Output('entry-note', 'value')],
     Input('entry-save-add', 'n_clicks'))
 def add_row(n_clicks):
     if n_clicks > 0:
-        return ''
-    
-# refresh entry (note) after saving
-@app.callback(
-    Output('entry-note', 'value'),
-    Input('entry-save-add', 'n_clicks'))
-def add_row(n_clicks):
-    if n_clicks > 0:
-        return ''
+        return '', ''
     
 # update category list when transaction type changes
 @app.callback(
@@ -404,6 +397,7 @@ def create_list_for_transaction_sub_category(transaction_type, category):
     transaction_sub_category = df[(df['transaction_type'] == transaction_type) & ((df['category'] == category))]['sub_category'].unique().tolist()
     
     return [{"label": i, "value": i} for i in transaction_sub_category]
+
 
 # enable/disable enter button before amount is filled
 @app.callback(
@@ -429,47 +423,7 @@ def enable_entry_enter_button(rows):
     else:
         return False
 
-# display remove preview table and update sum when table changes
-@app.callback(
-    Output("entry-preview-table-remove", "data"), 
-    [Input("entry-start-date-remove", "value"), 
-     Input("entry-start-month-remove", "value"),
-     Input("entry-start-year-remove", "value"), 
-     Input("entry-end-date-remove", "value"),
-     Input("entry-end-month-remove", "value"), 
-     Input("entry-end-year-remove", "value"),
-#      Input('entry-preview-table-remove', 'data_previous'),
-#      State('entry-preview-table-remove', 'data')
-    ]
-)
-def display_remove_preview_table(start_date, start_month, start_year,
-                                 end_date, end_month, end_year,
-#                                  data_previous, data
-                                ):
-      
-    
-    remove_preview_df = df.copy()
-    remove_preview_df['date'] = pd.to_datetime(remove_preview_df['date'])
-    start_day = f"{start_year}-{start_month}-{start_date}"
-    end_day = f"{end_year}-{end_month}-{end_date}"
-
-    remove_preview_df = remove_preview_df[(remove_preview_df['date'] >= start_day) & 
-                                          (remove_preview_df['date'] <= end_day)]
-
-    remove_preview_df['date'] = remove_preview_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
-    
-    # update sum when table changes
-#     if data_previous != data:
-#         remove_preview_df = pd.DataFrame.from_records(data).iloc[:-1]
-    
-    
-    remove_preview_df = remove_preview_df.append(remove_preview_df.sum(numeric_only=True), ignore_index=True)
-    
-    remove_preview_df.loc[len(remove_preview_df)-1, 'date'] = 'Sum'
-    
-    return remove_preview_df.to_dict('records')
-
-# display remove table
+# display remove/edit table that is editable
 @app.callback(
     Output("entry-remove-table", "data"), 
     [Input("start-date-entry-remove", "value"), 
@@ -503,7 +457,7 @@ def display_daily_expenses(start_date, start_month, start_year,
     [Input("entry-remove-table", "data"),
     Input("entry-remove-table", "columns"),]
 )
-def display_daily_expenses(rows, columns):
+def display_total_sum(rows, columns):
     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
     df.amount = df.amount.str.replace(',', '')
     df.amount = df.amount.astype('int32')
