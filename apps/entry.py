@@ -398,7 +398,17 @@ def create_list_for_transaction_sub_category(transaction_type, category):
     
     return [{"label": i, "value": i} for i in transaction_sub_category]
 
-
+# update transaction type when cash-out
+@app.callback(
+    Output("entry-transaction-type", "value"), 
+    [Input("entry-in-out", "value")]
+)
+def update_transaction_type_when_cash_out(cash_in_out):
+    if cash_in_out == 'Cash Out':
+        return 'Assets'
+    else:
+        return 'Expenses'
+        
 # enable/disable enter button before amount is filled
 @app.callback(
     Output("entry-enter", "disabled"), 
