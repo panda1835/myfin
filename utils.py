@@ -22,6 +22,13 @@ first_day_month = first_day_df.strftime("%m")
 first_day_year = first_day_df.strftime("%Y")
 first_day_df = first_day_df.strftime("%Y-%m-%d")
 
+# declare most recent date in the df
+last_day_df = pd.to_datetime(df['date']).max()
+last_day_date = last_day_df.strftime("%d")
+last_day_month = last_day_df.strftime("%m")
+last_day_year = last_day_df.strftime("%Y")
+last_day_df = last_day_df.strftime("%Y-%m-%d")
+
 display_columns = ['date', 
                 'date_of_week', 
                 'transaction_type', 
