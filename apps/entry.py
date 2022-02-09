@@ -8,7 +8,6 @@ import json
 
 from app import app
 
-import create_plot
 import utils
 import utils_plotly
 import init_database
@@ -16,10 +15,12 @@ import init_database
 with open('data.json','r') as f:
     data = json.load(f)
     database_name = data['constant']['DATABASE_NAME']
+df = init_database.init_database()
 
-df = init_database.init_database(database_name)
+update_counter = 0
 
-layout = html.Div([
+def layout():
+    return html.Div([
 
     dcc.Tabs([
         dcc.Tab(label='Add New Entry', children=[
@@ -318,10 +319,11 @@ def add_row_to_preview_table(n_clicks, rows, columns,
     Input('entry-preview-table-add', 'columns'))
     
 def save_new_entry(n_clicks_add, rows_add, columns_add):
+    global update_counter
     if n_clicks_add > 0: 
         rows = rows_add
         new_entry_df = pd.DataFrame(rows, columns=[c['name'] for c in columns_add])
-        database_df = init_database.init_database(database_name)
+        database_df = init_database.init_database()
         # remove , seperator in amount column
         new_entry_df.amount = new_entry_df.amount.str.replace(',', '')
         # append to original db
@@ -332,6 +334,8 @@ def save_new_entry(n_clicks_add, rows_add, columns_add):
         database_df.drop(columns = ["Date"], inplace=True)
         
         database_df.to_csv(database_name, index=False)
+
+        update_counter += 1
         
     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
 

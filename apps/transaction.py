@@ -16,7 +16,8 @@ import init_database
 
 df = init_database.init_database()
 
-layout = html.Div([
+def layout():
+    return html.Div([
     html.Div([
         html.H1("Culmulative Expenses in Month"),
         html.Div(

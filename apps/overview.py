@@ -13,7 +13,8 @@ import init_database
 
 df = init_database.init_database()
 
-layout = html.Div([
+def layout():
+    return html.Div([
     html.Div([
         html.H2(f"Expenses for Necessity in {calendar.month_name[int(utils.today_month)]}"),
                     
