@@ -10,6 +10,7 @@ from app import app
 
 import create_plot
 import utils
+import utils_plotly
 import init_database
 
 with open('data.json','r') as f:
@@ -19,36 +20,239 @@ with open('data.json','r') as f:
 df = init_database.init_database(database_name)
 
 layout = html.Div([
-    html.H1("Add New Entry"),
-    dash_table.DataTable(
-                id='entry-db-table',
-                data=df[utils.display_columns].iloc[::-1].to_dict('records'),
-                columns=[{"name": i, "id": i} for i in utils.display_columns],
-                editable=True,
-                page_size=10,
-    #                             fixed_rows={'headers': True},
-    #                             style_table={'height': 400},
-                style_cell={
+
+    dcc.Tabs([
+        dcc.Tab(label='Add New Entry', children=[
+            dash_table.DataTable(
+                        id='entry-db-table',
+                        data=df[utils.display_columns].iloc[::-1].to_dict('records'),
+                        columns=[{"name": i, "id": i} for i in utils.display_columns],
+                        editable=True,
+                        page_size=10,
+            #                             fixed_rows={'headers': True},
+            #                             style_table={'height': 400},
+                        style_cell={
+                                    'minWidth': 80, 'maxWidth': 250, 'width': 80
+                        }
+                    ),
+            html.Div([
+                html.Div([
+                    html.Div("On Date", 
+                        style={'display':'block'}
+                    ),
+
+                    dcc.DatePickerSingle(
+                            id='entry-date',
+                            min_date_allowed=datetime.date(2001, 6, 4),
+                            max_date_allowed=datetime.datetime.now(),
+                            initial_visible_month=datetime.datetime.now(),
+                            date=datetime.datetime.now(),
+                            display_format='DD/MM/YYYY'
+                    ),
+                ], style={'display':'inline-block', 'float':'left'}),
+
+                html.Div([
+                    html.Div("Cash In/Out", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Dropdown(
+                        id="entry-in-out",
+                        options=[{"label": i, "value": i} for i in ['Cash In', 'Cash Out']],
+                        value='Cash In',
+                        clearable=False
+                    ),
+                ], style={'width':'10%', 'display': 'inline-block', 'float':'left'}),
+
+                html.Div([
+                    html.Div("Type", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Dropdown(
+                        id="entry-transaction-type",
+                        options=[{"label": i, "value": i} for i in df['transaction_type'].unique()],
+                        value='Expenses',
+                        clearable=False
+                    ),
+                ], style={'width':'10%', 'display': 'inline-block', 'float':'left'}),
+
+                html.Div([
+                    html.Div("Category", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Dropdown(
+                        id="entry-category",
+                        clearable=False
+                    ),
+                ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
+
+                html.Div([
+                    html.Div("Sub-category", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Dropdown(
+                        id="entry-sub-category",
+                        clearable=False
+                    ),
+                ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
+
+                html.Div([
+
+                    html.Div("Amount", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Input(
+                        id="entry-amount",
+                        type='number'
+                    ),
+                ], style={'width': '10%', 'display': 'inline-block', 'float':'left', 
+                        'margin-right':'50px',
+                        'margin-left': '5px'}),
+
+                html.Div([
+                    html.Div("Currency", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Dropdown(
+                        id="entry-currency",
+                        options=[{"label": i, "value": i} for i in df['currency'].unique()],
+                        value=df['currency'].unique()[0],
+                        clearable=False
+                    ),
+                ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
+
+                html.Div([
+
+                    html.Div("Note", 
+                        style={
+                            'display': 'block',
+                        }),
+
+                    dcc.Input(
+                        id="entry-note",
+                        type='text',
+                    ),
+                ], style={'width': '10%', 'display': 'inline-block', 'margin-right':'50px'}),
+
+                html.Div([
+                    html.Div(". ", 
+                        style={
+                            'display': 'block',
+                        }),
+                    html.Button("Enter", 
+                                id='entry-enter', 
+                                n_clicks=0,
+                                disabled = True)  
+                ], style={'display':'inline-block', 'float':'right'}),
+
+
+                html.Br(),
+                dash_table.DataTable(
+                        id='entry-preview-table-add',
+    #                             data=df[display_columns].iloc[::-1].to_dict('records'),
+                        columns=[{"name": i, "id": i} for i in utils.display_columns],
+                        editable=True,
+                        page_size=10,
+                        style_cell={
                             'minWidth': 80, 'maxWidth': 250, 'width': 80
-                }
-            ),
-                    
-    html.Br(),
+                        },
+                        row_deletable=True,
+                ),
 
-    dcc.RadioItems(
-        id='entry-radio-button',
-        options=[
-            {'label': 'Add New Entry', 'value': 'add'},
-            {'label': 'Remove Entry', 'value': 'remove'}
-        ],
-        value='add',
-        labelStyle={'display': 'inline-block'}
-    ),
 
-    html.Br(),
-    # ---
+                html.Br(),
 
-    html.Div(id='entry-option-display'),
+                html.Button('Save to Database', 
+                            id='entry-save-add', 
+                            n_clicks=0, 
+                            style={'display':'block'},
+                            disabled=True),
+                
+                html.Br(),
+                html.Br(),
+                html.Br(),
+            ])
+        ]),
+
+        dcc.Tab(label='Remove/Edit Entry', children=[
+            html.Div([
+                #---------- From ---------
+                html.Div(
+                    utils_plotly.date_month_year_dropdown(
+                        "From",
+                        {
+                            "id_date": "start-date-entry-remove",
+                            "id_month": "start-month-entry-remove",
+                            "id_year": "start-year-entry-remove"
+                        },
+                        {
+                            "value_date": utils.last_day_date,
+                            "value_month": utils.last_day_month,
+                            "value_year": utils.last_day_year,
+                        }
+                    ), style={'width': '50%', 'display': 'inline-block'}
+                ),
+                #---------- To ---------
+                html.Div(
+                    utils_plotly.date_month_year_dropdown(
+                        "To",
+                        {
+                            "id_date": "end-date-entry-remove",
+                            "id_month": "end-month-entry-remove",
+                            "id_year": "end-year-entry-remove",
+                        },
+                        {
+                            "value_date": utils.last_day_date,
+                            "value_month": utils.last_day_month,
+                            "value_year": utils.last_day_year,
+                        }
+                    ), style={'width': '50%', 'display': 'inline-block'}
+                ),
+                
+                # --------
+            ]),
+                
+            dash_table.DataTable(
+                    id='entry-remove-table',
+                    data=df[utils.display_columns].to_dict('records'),
+                    columns=[{"name": i, "id": i} for i in utils.display_columns],
+                    merge_duplicate_headers=True,
+                    editable=True,
+                    row_deletable=True,
+                    fixed_rows={'headers': True},
+                    style_table={'height': 300},
+                    style_cell={
+                        'minWidth': 80, 'maxWidth': 250, 'width': 95
+                    }
+                ),
+
+            html.Br(),
+
+            html.B('Sum:', id='entry-remove-sum-text', style={'display': 'inline-block', "margin-right": "20px",}),
+            html.Div(id='entry-remove-sum-value', style={'display': 'inline-block'}),
+
+            html.Br(),
+
+            html.Button(
+                'Save to Database', 
+                id='entry-save-remove', 
+                n_clicks=0, 
+                style={'display':'block'}
+                ),
+        ])
+    ]),
+
 ])
 
 @app.callback(
@@ -264,278 +468,43 @@ def display_remove_preview_table(start_date, start_month, start_year,
     remove_preview_df.loc[len(remove_preview_df)-1, 'date'] = 'Sum'
     
     return remove_preview_df.to_dict('records')
-    
 
-
-# add entry radio button
+# display remove table
 @app.callback(
-    Output("entry-option-display", "children"), 
-    [Input("entry-radio-button", "value")]
+    Output("entry-remove-table", "data"), 
+    [Input("start-date-entry-remove", "value"), 
+     Input("start-month-entry-remove", "value"),
+     Input("start-year-entry-remove", "value"), 
+     Input("end-date-entry-remove", "value"),
+     Input("end-month-entry-remove", "value"), 
+     Input("end-year-entry-remove", "value"),]
 )
-def display_add_remove_panel(value):
-    if value == 'add':
-        return html.Div([
-            html.Div([
-                html.Div("On Date", 
-                    style={'display':'block'}
-                ),
+def display_daily_expenses(start_date, start_month, start_year,
+                           end_date, end_month, end_year):
+    
+    transaction_df = df.copy()
+    transaction_df['date'] = pd.to_datetime(transaction_df['date'])
+    start_day = f"{start_year}-{start_month}-{start_date}"
+    end_day = f"{end_year}-{end_month}-{end_date}"
 
-                dcc.DatePickerSingle(
-                        id='entry-date',
-                        min_date_allowed=datetime.date(2001, 6, 4),
-                        max_date_allowed=datetime.datetime.now(),
-                        initial_visible_month=datetime.datetime.now(),
-                        date=datetime.datetime.now(),
-                        display_format='DD/MM/YYYY'
-                ),
-            ], style={'display':'inline-block', 'float':'left'}),
-
-            html.Div([
-                html.Div("Cash In/Out", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Dropdown(
-                    id="entry-in-out",
-                    options=[{"label": i, "value": i} for i in ['Cash In', 'Cash Out']],
-                    value='Cash In',
-                    clearable=False
-                ),
-            ], style={'width':'10%', 'display': 'inline-block', 'float':'left'}),
-
-            html.Div([
-                html.Div("Type", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Dropdown(
-                    id="entry-transaction-type",
-                    options=[{"label": i, "value": i} for i in df['transaction_type'].unique()],
-                    value='Expenses',
-                    clearable=False
-                ),
-            ], style={'width':'10%', 'display': 'inline-block', 'float':'left'}),
-
-            html.Div([
-                html.Div("Category", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Dropdown(
-                    id="entry-category",
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
-
-            html.Div([
-                html.Div("Sub-category", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Dropdown(
-                    id="entry-sub-category",
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
-
-            html.Div([
-
-                html.Div("Amount", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Input(
-                    id="entry-amount",
-                    type='number'
-                ),
-            ], style={'width': '10%', 'display': 'inline-block', 'float':'left', 
-                      'margin-right':'50px',
-                      'margin-left': '5px'}),
-
-            html.Div([
-                html.Div("Currency", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Dropdown(
-                    id="entry-currency",
-                    options=[{"label": i, "value": i} for i in df['currency'].unique()],
-                    value=df['currency'].unique()[0],
-                    clearable=False
-                ),
-            ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
-
-            html.Div([
-
-                html.Div("Note", 
-                     style={
-                        'display': 'block',
-                     }),
-
-                dcc.Input(
-                    id="entry-note",
-                    type='text',
-                ),
-            ], style={'width': '10%', 'display': 'inline-block', 'margin-right':'50px'}),
-
-            html.Div([
-                html.Div(". ", 
-                     style={
-                        'display': 'block',
-                     }),
-                html.Button("Enter", 
-                            id='entry-enter', 
-                            n_clicks=0,
-                            disabled = True)  
-            ], style={'display':'inline-block', 'float':'right'}),
+    transaction_df = transaction_df[(transaction_df['date'] >= start_day) & (transaction_df['date'] <= end_day)]
+    
+    transaction_df['date'] = transaction_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
+    
+    # cast from float to int to format
+    transaction_df['amount'] = transaction_df['amount'].astype('int64')
+    transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
+    return transaction_df.to_dict('records')
 
 
-            html.Br(),
-            dash_table.DataTable(
-                    id='entry-preview-table-add',
-#                             data=df[display_columns].iloc[::-1].to_dict('records'),
-                    columns=[{"name": i, "id": i} for i in utils.display_columns],
-                    editable=True,
-                    page_size=10,
-                    style_cell={
-                        'minWidth': 80, 'maxWidth': 250, 'width': 80
-                    },
-                    row_deletable=True,
-               ),
-
-
-            html.Br(),
-
-            html.Button('Save to Database', 
-                        id='entry-save-add', 
-                        n_clicks=0, 
-                        style={'display':'block'},
-                        disabled=True),
-            
-            html.Br(),
-            html.Br(),
-            html.Br(),
-        ])
-            
-    else:
-        return html.Div([
-
-            html.Div([
-                html.Div("From", 
-                         style={'width': '10%', 
-                                'height':'50%',
-                                'display': 'block',
-                         }),
-
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-start-date-remove",
-                        options=[{"label": str(i).zfill(2), "value": str(i).zfill(2)} for i in range(1, 32)],
-                        value=utils.today_date.zfill(2),
-                        clearable=False
-                    ),
-                ], style={'width': '20%', 'display': 'inline-block'}),
-
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-start-month-remove",
-                        options=[{"label": 'January'  , "value": '01'},
-                                 {"label": 'February' , "value": '02'},
-                                 {"label": 'March'    , "value": '03'},
-                                 {"label": 'April'    , "value": '04'},
-                                 {"label": 'May'      , "value": '05'},
-                                 {"label": 'June'     , "value": '06'},
-                                 {"label": 'July'     , "value": '07'},
-                                 {"label": 'August'   , "value": '08'},
-                                 {"label": 'September', "value": '09'},
-                                 {"label": 'October'  , "value": '10'},
-                                 {"label": 'November' , "value": '11'},
-                                 {"label": 'December' , "value": '12'}],
-                        value=utils.today_month,
-                        clearable=False
-                    ),
-                ], style={'width': '35%', 'display': 'inline-block'}),
-
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-start-year-remove",
-                        options=[{"label": i  , "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                        value=utils.today_year,
-                        clearable=False
-                    ),
-                ], style={'width': '20%', 'display': 'inline-block'})
-            ], style={'width': '25%', 'display': 'inline-block'}),
-            #----------
-
-            html.Div([
-                html.Div("To", 
-                             style={'width': '10%', 
-                                    'height':'50%',
-                                    'display': 'block',
-                             }),
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-end-date-remove",
-                        options=[{"label": str(i).zfill(2), "value": str(i).zfill(2)} for i in range(1, 32)],
-                        value=utils.today_date,
-                        clearable=False
-                    ),
-                ], style={'width': '10%', 'display': 'inline-block'}),
-
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-end-month-remove",
-                        options=[{"label": 'January'  , "value": '01'},
-                                 {"label": 'February' , "value": '02'},
-                                 {"label": 'March'    , "value": '03'},
-                                 {"label": 'April'    , "value": '04'},
-                                 {"label": 'May'      , "value": '05'},
-                                 {"label": 'June'     , "value": '06'},
-                                 {"label": 'July'     , "value": '07'},
-                                 {"label": 'August'   , "value": '08'},
-                                 {"label": 'September', "value": '09'},
-                                 {"label": 'October'  , "value": '10'},
-                                 {"label": 'November' , "value": '11'},
-                                 {"label": 'December' , "value": '12'}],
-                        value=utils.today_month,
-                        clearable=False
-                    ),
-                ], style={'width': '18%', 'display': 'inline-block'}),
-
-                html.Div([
-                    dcc.Dropdown(
-                        id="entry-end-year-remove",
-                        options=[{"label": i  , "value": i} for i in range(int(utils.first_day_year), datetime.datetime.now().year+1)],
-                        value=utils.first_day_year,
-                        clearable=False
-                    ),
-                ], style={'width': '10%', 'display': 'inline-block'})
-            ], style={'width': '50%', 'display': 'inline-block'}),
-
-
-            html.Br(),
-            dash_table.DataTable(
-                    id='entry-preview-table-remove',
-                    columns=[{"name": i, "id": i} for i in utils.display_columns],
-                    editable=True,
-                    fixed_rows={'headers': True},
-                    style_table={'height': 400},
-                    style_cell={
-                        'minWidth': 80, 'maxWidth': 250, 'width': 80
-                    },
-                    row_deletable=True,
-               ),
-
-
-            html.Br(),
-
-            html.Button('Save to Database', id='entry-save-remove', n_clicks=0, style={'display':'block'}),
-            
-            html.Br(),
-        ])
+# update sum 
+@app.callback(
+    Output("entry-remove-sum-value", "children"), 
+    [Input("entry-remove-table", "data"),
+    Input("entry-remove-table", "columns"),]
+)
+def display_daily_expenses(rows, columns):
+    df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
+    df.amount = df.amount.str.replace(',', '')
+    df.amount = df.amount.astype('int32')
+    return html.Div(f' {"{:,}".format(df.amount.sum())} VND')
