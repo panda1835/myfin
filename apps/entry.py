@@ -173,6 +173,10 @@ layout = html.Div([
 
                 html.Br(),
 
+                html.B('Sum:', id='entry-add-sum-text', style={'display': 'inline-block', "margin-right": "20px",}),
+                html.Div(id='entry-add-sum-value', style={'display': 'inline-block'}),
+
+                html.Br(),
                 html.Button('Save to Database', 
                             id='entry-save-add', 
                             n_clicks=0, 
@@ -255,6 +259,7 @@ layout = html.Div([
 
 ])
 
+# add row to preview table in add entry
 @app.callback(
     Output('entry-preview-table-add', 'data'),
     Input('entry-enter', 'n_clicks'),
@@ -282,7 +287,6 @@ def add_row_to_preview_table(n_clicks, rows, columns,
         note = ''
     
     if n_clicks > 0:
-        
         new_entry_df = pd.DataFrame({
                             'date' : f"{date}",
                             'date_of_week' : f"{weekday}",
@@ -297,40 +301,28 @@ def add_row_to_preview_table(n_clicks, rows, columns,
         if rows == None:
             sum_df = new_entry_df
         else: 
-            sum_df = pd.DataFrame.from_records(rows).iloc[:-1]
+            sum_df = pd.DataFrame.from_records(rows)
             sum_df = sum_df.append(new_entry_df)
-            
+        
+        sum_df['amount'] = sum_df['amount'].str.replace(',', '')
         sum_df['amount'] = sum_df['amount'].astype('int64')
-        sum_df = sum_df.append(sum_df.sum(numeric_only=True), ignore_index=True)
-    
-        sum_df.loc[len(sum_df)-1, 'date'] = 'Sum'
+        sum_df['amount'] = sum_df['amount'].map('{:,d}'.format)
         
         return sum_df.to_dict("records")
 
-# save to database add
+# save to database in add entry
 @app.callback(
     Output('entry-db-table', 'data'),
     Input('entry-save-add', 'n_clicks'),
-    State('entry-preview-table-add', 'data'),
+    Input('entry-preview-table-add', 'data'),
+    Input('entry-preview-table-add', 'columns'))
     
-    Input('entry-save-remove', 'n_clicks'),
-    State('entry-preview-table-remove', 'data'),
-    State("entry-start-date-remove", "value"), 
-     State("entry-start-month-remove", "value"),
-     State("entry-start-year-remove", "value"), 
-     State("entry-end-date-remove", "value"),
-     State("entry-end-month-remove", "value"), 
-     State("entry-end-year-remove", "value"))
-    
-def update_entry_table(n_clicks_add, rows_add,
-                      n_clicks_remove, rows_remove, 
-                       start_date, start_month, start_year,
-                       end_date, end_month, end_year):
+def save_new_entry(n_clicks_add, rows_add, columns_add):
      
     if n_clicks_add > 0: 
         rows = rows_add
-        new_entry_df = pd.DataFrame.from_records(rows).iloc[:-1]
-        database_df = pd.read_csv(database_name)
+        new_entry_df = pd.DataFrame(rows, columns=[c['name'] for c in columns_add])
+        database_df = init_database.init_database(database_name)
         database_df = database_df.append(new_entry_df)
         
         database_df['Date'] = pd.to_datetime(database_df['date'])
@@ -339,43 +331,15 @@ def update_entry_table(n_clicks_add, rows_add,
         
         database_df.to_csv(database_name, index=False)
         
-    if n_clicks_remove > 0: 
-        rows = rows_remove
-        old_entry = df.copy()
-        old_entry['date'] = pd.to_datetime(old_entry['date'])
-        start_day = f"{start_year}-{start_month}-{start_date}"
-        end_day = f"{end_year}-{end_month}-{end_date}"
-
-        old_entry = old_entry[(old_entry['date'] >= start_day) & 
-                                              (old_entry['date'] <= end_day)]
-
-        old_entry['date'] = old_entry['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
-    
-        
-        new_entry = pd.DataFrame.from_records(rows).iloc[:-1]
-        
-        
-        database_df = pd.read_csv(database_name)
-        database_df = pd.concat([old_entry, database_df]).drop_duplicates(keep=False)
-
-        database_df = database_df.append(new_entry)
-        
-        database_df['Date'] = pd.to_datetime(database_df['date'])
-        database_df.sort_values(by=['Date'], inplace=True)
-        database_df.drop(columns = ["Date"], inplace=True)
-        
-        database_df.to_csv(database_name, index=False)
     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
 
-
-# refresh entry amount and note after saving
+# refresh entry note after saving
 @app.callback(
-    [Output('entry-amount', 'value'),
-    Output('entry-note', 'value')],
+    Output('entry-note', 'value'),
     Input('entry-save-add', 'n_clicks'))
 def add_row(n_clicks):
     if n_clicks > 0:
-        return '', ''
+        return ''
     
 # update category list when transaction type changes
 @app.callback(
@@ -408,7 +372,26 @@ def update_transaction_type_when_cash_out(cash_in_out):
         return 'Assets'
     else:
         return 'Expenses'
-        
+
+# update amount when cash-out or enter
+@app.callback(
+    Output("entry-amount", "value"), 
+    [Input("entry-in-out", "value"),
+    Input("entry-preview-table-add", "data"),
+    Input("entry-preview-table-add", "columns"),
+    Input('entry-save-add', 'n_clicks')]
+)
+def update_amount_when_cash_out(cash_in_out, rows, columns, n_clicks):
+    df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
+    df.amount = df.amount.str.replace(',', '')
+    df.amount = df.amount.astype('int32')
+    if n_clicks > 0:
+        return ''
+    elif cash_in_out == 'Cash Out':
+        return df.amount.sum()
+    else:
+        return None
+
 # enable/disable enter button before amount is filled
 @app.callback(
     Output("entry-enter", "disabled"), 
@@ -460,14 +443,25 @@ def display_daily_expenses(start_date, start_month, start_year,
     transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
     return transaction_df.to_dict('records')
 
+# update amount sum in add entry
+@app.callback(
+    Output("entry-add-sum-value", "children"), 
+    [Input("entry-preview-table-add", "data"),
+    Input("entry-preview-table-add", "columns"),]
+)
+def display_total_sum_add(rows, columns):
+    df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
+    df.amount = df.amount.str.replace(',', '')
+    df.amount = df.amount.astype('int32')
+    return html.Div(f' {"{:,}".format(df.amount.sum())} VND')
 
-# update sum 
+# update amount sum in remove entry
 @app.callback(
     Output("entry-remove-sum-value", "children"), 
     [Input("entry-remove-table", "data"),
     Input("entry-remove-table", "columns"),]
 )
-def display_total_sum(rows, columns):
+def display_total_sum_remove(rows, columns):
     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
     df.amount = df.amount.str.replace(',', '')
     df.amount = df.amount.astype('int32')
