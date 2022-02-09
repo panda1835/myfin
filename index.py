@@ -2,11 +2,13 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 from dash.dependencies import Input, Output
+import pandas as pd
 
 from app import app
 from apps import accounts, entry, information, overview, transaction
 
 import init_database
+import utils
 
 # styling the sidebar
 SIDEBAR_STYLE = {
@@ -63,15 +65,30 @@ def update_db():
     global overview_layout
     global transaction_layout
 
-    entry.df = init_database.init_database()
-    overview.df = init_database.init_database()
-    transaction.df = init_database.init_database()
+    df = init_database.init_database()
+    entry.df = df
+    overview.df = df
+    transaction.df = df
 
     entry_layout = entry.layout()
     overview_layout = overview.layout()
     transaction_layout = transaction.layout()
 
     update_status_counter = entry.update_counter
+
+    # declare first date in the df
+    utils.first_day_df = pd.to_datetime(df['date']).min()
+    utils.first_day_date = utils.first_day_df.strftime("%d")
+    utils.first_day_month = utils.first_day_df.strftime("%m")
+    utils.first_day_year = utils.first_day_df.strftime("%Y")
+    utils.first_day_df = utils.first_day_df.strftime("%Y-%m-%d")
+
+    # declare most recent date in the df
+    utils.last_day_df = pd.to_datetime(df['date']).max()
+    utils.last_day_date = utils.last_day_df.strftime("%d")
+    utils.last_day_month = utils.last_day_df.strftime("%m")
+    utils.last_day_year = utils.last_day_df.strftime("%Y")
+    utils.last_day_df = utils.last_day_df.strftime("%Y-%m-%d")
 
 @app.callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
