@@ -6,6 +6,8 @@ from dash.dependencies import Input, Output
 from app import app
 from apps import accounts, entry, information, overview, transaction
 
+import init_database
+
 # styling the sidebar
 SIDEBAR_STYLE = {
     "position": "fixed",
@@ -26,7 +28,6 @@ CONTENT_STYLE = {
 
 sidebar = html.Div(
     [
-        html.H2("Sidebar", className="display-sidebar"),
         dbc.Nav(
             [
                 dbc.NavLink("Home", href="/overview", active="exact"),
@@ -50,22 +51,53 @@ app.layout = html.Div([
     content
 ])
 
+update_status_counter = 0
+entry_layout = entry.layout()
+overview_layout = overview.layout()
+transaction_layout = transaction.layout()
+
+
+def update_db():
+    global update_status_counter
+    global entry_layout
+    global overview_layout
+    global transaction_layout
+
+    entry.df = init_database.init_database()
+    overview.df = init_database.init_database()
+    transaction.df = init_database.init_database()
+
+    entry_layout = entry.layout()
+    overview_layout = overview.layout()
+    transaction_layout = transaction.layout()
+
+    update_status_counter = entry.update_counter
 
 @app.callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
 def display_page(pathname):
+    # global update_status_counter
+    if entry.update_counter != update_status_counter:
+        update_db()
+
     if pathname == '/accounts':
         return accounts.layout
+
     elif pathname == '/entry':
-        return entry.layout
+        return entry_layout
+
     elif pathname == '/information':
         return information.layout
+
     elif pathname == '/overview':
-        return overview.layout
+        return overview_layout
+
     elif pathname == '/':
-        return overview.layout
+        return overview_layout
+
     elif pathname == '/transaction':
-        return transaction.layout
+        return transaction_layout
+
     else:
         return dbc.Jumbotron(
             [
@@ -74,7 +106,6 @@ def display_page(pathname):
                 html.P(f"The pathname {pathname} was not recognised..."),
             ]
         )
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
