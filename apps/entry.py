@@ -318,11 +318,13 @@ def add_row_to_preview_table(n_clicks, rows, columns,
     Input('entry-preview-table-add', 'columns'))
     
 def save_new_entry(n_clicks_add, rows_add, columns_add):
-     
     if n_clicks_add > 0: 
         rows = rows_add
         new_entry_df = pd.DataFrame(rows, columns=[c['name'] for c in columns_add])
         database_df = init_database.init_database(database_name)
+        # remove , seperator in amount column
+        new_entry_df.amount = new_entry_df.amount.str.replace(',', '')
+        # append to original db
         database_df = database_df.append(new_entry_df)
         
         database_df['Date'] = pd.to_datetime(database_df['date'])
@@ -332,6 +334,45 @@ def save_new_entry(n_clicks_add, rows_add, columns_add):
         database_df.to_csv(database_name, index=False)
         
     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
+
+# save to database in add entry
+# @app.callback(
+#     Output('entry-db-table', 'data'),
+#     Input('entry-save-add', 'n_clicks'),
+#     State('entry-preview-table-add', 'data'))
+    
+# def update_entry_table(
+#                       n_clicks_remove, rows_remove, 
+#                        ):
+        
+#     if n_clicks_remove > 0: 
+#         rows = rows_remove
+#         old_entry = df.copy()
+#         old_entry['date'] = pd.to_datetime(old_entry['date'])
+#         start_day = f"{start_year}-{start_month}-{start_date}"
+#         end_day = f"{end_year}-{end_month}-{end_date}"
+
+#         old_entry = old_entry[(old_entry['date'] >= start_day) & 
+#                                               (old_entry['date'] <= end_day)]
+
+#         old_entry['date'] = old_entry['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
+    
+        
+#         new_entry = pd.DataFrame.from_records(rows).iloc[:-1]
+        
+        
+#         database_df = pd.read_csv(database_name)
+#         database_df = pd.concat([old_entry, database_df]).drop_duplicates(keep=False)
+
+#         database_df = database_df.append(new_entry)
+        
+#         database_df['Date'] = pd.to_datetime(database_df['date'])
+#         database_df.sort_values(by=['Date'], inplace=True)
+#         database_df.drop(columns = ["Date"], inplace=True)
+        
+#         database_df.to_csv(database_name, index=False)
+#     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
+
 
 # refresh entry note after saving
 @app.callback(
