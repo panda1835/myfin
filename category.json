@@ -1,0 +1,493 @@
+{
+    "Expenses":{
+        "Description": "Where money goes",
+        "Categories": {
+            "Required Expenses": {
+                "Description": "",
+                "Sub-categories":{
+                    "Food": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Beverage": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Rentals": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Water Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Phone Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Electricity Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Gas Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Television Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Internet Bill": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Other Utility Bills": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+            "Transportation": {
+                "Description": "",
+                "Sub-categories":{
+                    "Grab": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Bus": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Gas": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Delivery": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Coach": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+            "Up & Comers": {
+                "Description": "",
+                "Sub-categories":{
+                    "Home Maintenance": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Vehicle Maintenance": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Medical Check-up": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Insurances": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Houseware": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Personal Items": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Pets": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Home Services": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Banking Fees": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Other Expenses": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Education": {
+                "Description": "",
+                "Sub-categories": {
+                    "Books": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Printing": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Fun & Relax": {
+                "Description": "",
+                "Sub-categories":{
+                    "Fitness": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Makeup": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Streaming Service": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Fun Money": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Gifts": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Donations": {
+                "Description": "",
+                "Sub-categories": {
+                    "Conservation": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Travel": {
+                "Description": "",
+                "Sub-categories": {
+                    "ABC": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+
+    "Income": {
+        "Description": "Where money comes from",
+        "Categories": {
+            "Company XYZ": {
+                "Description": "",
+                "Sub-categories": {
+                    "Salary": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }, 
+                    "Bonus": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            }
+        }
+
+    },
+
+    "Assets": {
+        "Description": "Where money sits",
+        "Categories": {
+
+            "Accounts Payable": {
+                "Description": "",
+                "Sub-category": {
+                    "Cash": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "ACB Fulbright": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "VCB VISA": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Grab MOCA": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Savings": {
+                "Description": "",
+                "Sub-category": {
+                    "Saving-01": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Commodities": {
+                "Description": "Commodities are things you own that can exchanged into money. It has unit of quantity and the price changes over time",
+                "Sub-category": {
+                    "Stocks": {
+                        "Description": "",
+                        "Unit": [
+                            "VCB"
+                        ]
+                    },
+                    "Bonds": {
+                        "Description": "",
+                        "Unit": [
+                            "..."
+                        ]
+                    },
+                    "Mutual Funds and ETFs": {
+                        "Description": "",
+                        "Unit": [
+                            "..."
+                        ]
+                    },
+                    "Cryptocurrencies": {
+                        "Description": "",
+                        "Unit": [
+                            "BIT"
+                        ]
+                    },
+                    "Real-estates": {
+                        "Description": "",
+                        "Unit": [
+                            "..."
+                        ]
+                    },
+                    "Gold": {
+                        "Description": "",
+                        "Unit": [
+                            "Chỉ"
+                        ]
+                    },
+                    "Foreign Currency": {
+                        "Description": "",
+                        "Unit": [
+                            "USD",
+                            "EUR"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+
+    "Debts":{
+        "Description": "Money that others borrow you or you borrow others. The combined total of your Assets and Debts is your net worth",
+        "Categories": {
+            "Debts to Collect": {
+                "Description": "It should be positive if someone borrows you an amount of money, or 0 otherwise",
+                "Sub-categories": {
+                    "Person A": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+            "Collect Interest": {
+                "Description": "",
+                "Sub-categories": {
+                    "Person A": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+                
+            },
+            "Debt to Pay": {
+                "Description": "It should be negative because it offsets the value of your assets, or 0 otherwise.",
+                "Sub-categories": {
+                    "Person A": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+                
+            },
+
+            "Pay Interest": {
+                "Description": "",
+                "Sub-categories": {
+                    "Person A": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+                
+            },
+
+            "Reimbursements": {
+                "Description": "An account for tracking reimbursements. Reimbursements can be seen as a debt Company XYZ owes you. Later, when Company XYZ pays the amount back, the money will transfer from this reimbursement account back to a regular asset account",
+                "Sub-categories": {
+                    "Company XYZ": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    
+    "Equity": {
+        "Description": "Real value of your property",
+        "Categories": {
+            "Balances": {
+                "Description": "",
+                "Sub-categories":{
+                    "Opening Balances": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Asset Balances": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+
+
+    "Project A": {
+        "Description": "An account for money spent for project A that recieves funds from other stakeholders. It keeps the transaction for this project seperated from your personal accounting system.",
+        "Categories": {
+            "Expenses": {
+                "Description": "",
+                "Sub-categories": {
+                    "ABC": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Income": {
+                "Description": "",
+                "Sub-categories": {
+                    "ABC": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
