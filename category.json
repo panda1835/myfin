@@ -177,13 +177,49 @@
             "Education": {
                 "Description": "",
                 "Sub-categories": {
-                    "Books": {
+                    "Printed Books": {
                         "Description": "",
                         "Unit": [
                             "VND"
                         ]
                     },
+
+                    "E-Books": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Audio Books": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
                     "Printing": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Conferences": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Online Courses": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Colab Pro": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -201,7 +237,7 @@
                             "VND"
                         ]
                     },
-                    "Makeup": {
+                    "Sports": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -228,6 +264,13 @@
 
                     "Hangout": {
                         "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }, 
+
+                    "New Experiences": {
+                        "Description": "Enrich my life experiences",
                         "Unit": [
                             "VND"
                         ]
@@ -268,13 +311,22 @@
             "Fulbright": {
                 "Description": "",
                 "Sub-categories": {
+
                     "Meal Allowance": {
                         "Description": "",
                         "Unit": [
                             "VND"
                         ]
-                    }, 
+                    },
+
                     "Teaching Assitant": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    
+                    "Research Assitant": {
                         "Description": "",
                         "Unit": [
                             "VND"
