@@ -108,6 +108,7 @@
                     } 
                 }
             },
+
             "Up & Comers": {
                 "Description": "",
                 "Sub-categories":{
@@ -160,7 +161,7 @@
                         ]
                     },
                     "Banking Fees": {
-                        "Description": "",
+                        "Description": "includes card maintenance fees, transfer fees, withdrawal fees",
                         "Unit": [
                             "VND"
                         ]
@@ -177,7 +178,7 @@
             "Education": {
                 "Description": "",
                 "Sub-categories": {
-                    "Printed Books": {
+                    "Paper Books": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -198,7 +199,7 @@
                         ]
                     },
 
-                    "Printing": {
+                    "Printing Books": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -220,6 +221,13 @@
                     },
 
                     "Colab Pro": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Fulbright Tuition": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -281,7 +289,15 @@
             "Donations": {
                 "Description": "",
                 "Sub-categories": {
+
                     "Conservation": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Lottery": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -293,7 +309,21 @@
             "Travel": {
                 "Description": "",
                 "Sub-categories": {
-                    "ABC": {
+                    "MCC 10/2020": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Dalat 01/2021": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Yokdon 02/2022": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -307,6 +337,33 @@
     "Income": {
         "Description": "Where money comes from",
         "Categories": {
+
+            "Parents": {
+                "Description": "",
+                "Sub-categories": {
+
+                    "Tuition": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Allowance": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investments": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
 
             "Fulbright": {
                 "Description": "",
@@ -325,8 +382,75 @@
                             "VND"
                         ]
                     },
-                    
+
                     "Research Assitant": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Finhay": {
+                "Description": "",
+                "Sub-categories": {
+
+                    "Demand Deposit Interest": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "3-month Deposit Interest": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "12-month Deposit Interest": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Rùa Hoàn Kiếm": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Voi Rừng": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Saola": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Cò Trắng": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Investment-Trâu Nước": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Investment-Báo Gấm": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -347,6 +471,13 @@
                 "Sub-category": {
 
                     "Cash": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Home Cash": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -375,10 +506,78 @@
                 }
             },
 
-            "Savings": {
+            "Finhay": {
                 "Description": "",
                 "Sub-category": {
-                    "Saving-01": {
+
+                    "Demand Deposit": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "3-month Deposit": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "12-month Deposit": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Gold": {
+                        "Description": "",
+                        "Unit": [
+                            "Chỉ vàng"
+                        ]
+                    },
+                    "Stocks": {
+                        "Description": "",
+                        "Unit": [
+                            "ACB"
+                        ]
+                    },
+
+                    "Investment-Rùa Hoàn Kiếm": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Voi Rừng": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Saola": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "Investment-Cò Trắng": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Investment-Trâu Nước": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Investment-Báo Gấm": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -423,7 +622,7 @@
                     "Gold": {
                         "Description": "",
                         "Unit": [
-                            "Chỉ"
+                            "Chỉ vàng"
                         ]
                     },
                     "Foreign Currency": {
@@ -517,7 +716,7 @@
                         ]
                     },
 
-                    "Asset Balances": {
+                    "Balancing Assets": {
                         "Description": "",
                         "Unit": [
                             "VND"
