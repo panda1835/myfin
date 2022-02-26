@@ -99,7 +99,13 @@
                         "Unit": [
                             "VND"
                         ]
-                    }
+                    },
+                    "Parking Fees": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    } 
                 }
             },
             "Up & Comers": {
@@ -218,6 +224,13 @@
                         "Unit": [
                             "VND"
                         ]
+                    },
+
+                    "Hangout": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
                     }
                 }
             },
@@ -251,16 +264,17 @@
     "Income": {
         "Description": "Where money comes from",
         "Categories": {
-            "Company XYZ": {
+
+            "Fulbright": {
                 "Description": "",
                 "Sub-categories": {
-                    "Salary": {
+                    "Meal Allowance": {
                         "Description": "",
                         "Unit": [
                             "VND"
                         ]
                     }, 
-                    "Bonus": {
+                    "Teaching Assitant": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -279,6 +293,7 @@
             "Accounts Payable": {
                 "Description": "",
                 "Sub-category": {
+
                     "Cash": {
                         "Description": "",
                         "Unit": [
