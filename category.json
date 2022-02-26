@@ -89,12 +89,18 @@
                         ]
                     },
                     "Delivery": {
-                        "Description": "",
+                        "Description": "For example, book Grab Express to deliver food.",
                         "Unit": [
                             "VND"
                         ]
                     },
                     "Coach": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+                    "Flight": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -142,6 +148,14 @@
                             "VND"
                         ]
                     },
+
+                    "Clothes": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
                     "Personal Items": {
                         "Description": "",
                         "Unit": [
@@ -206,6 +220,13 @@
                         ]
                     },
 
+                    "Journals": {
+                        "Description": "For example, Tạp chí Pi",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
                     "Conferences": {
                         "Description": "",
                         "Unit": [
@@ -225,9 +246,14 @@
                         "Unit": [
                             "VND"
                         ]
-                    },
+                    }
+                }
+            },
 
-                    "Fulbright Tuition": {
+            "Tuitions": {
+                "Description": "",
+                "Sub-categories":{
+                    "Fulbright": {
                         "Description": "",
                         "Unit": [
                             "VND"
@@ -257,6 +283,14 @@
                             "VND"
                         ]
                     },
+
+                    "Theater": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
                     "Fun Money": {
                         "Description": "",
                         "Unit": [
@@ -309,6 +343,7 @@
             "Travel": {
                 "Description": "",
                 "Sub-categories": {
+
                     "MCC 10/2020": {
                         "Description": "",
                         "Unit": [
@@ -365,6 +400,19 @@
                 }
             },
 
+            "Home": {
+                "Description": "",
+                "Sub-categories": {
+
+                    "Tet": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
             "Fulbright": {
                 "Description": "",
                 "Sub-categories": {
@@ -384,6 +432,39 @@
                     },
 
                     "Research Assitant": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    },
+
+                    "ICPC Awards": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "Lasluz": {
+                "Description": "",
+                "Sub-categories": {
+
+                    "Benny": {
+                        "Description": "",
+                        "Unit": [
+                            "VND"
+                        ]
+                    }
+                }
+            },
+
+            "FFI": {
+                "Description": "",
+                "Sub-categories": {
+
+                    "Intenship Stipends": {
                         "Description": "",
                         "Unit": [
                             "VND"
