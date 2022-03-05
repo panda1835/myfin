@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import pandas as pd
 
 from app import app
-from apps import accounts, entry, information, overview, transaction
+from apps import assets, entry, information, overview, transaction
 
 import init_database
 import utils
@@ -34,7 +34,7 @@ sidebar = html.Div(
             [
                 dbc.NavLink("Home", href="/overview", active="exact"),
                 dbc.NavLink("Transactions", href="/transaction", active="exact"),
-                dbc.NavLink("Accounts", href="/accounts", active="exact"),
+                dbc.NavLink("Assets", href="/assets", active="exact"),
                 dbc.NavLink("Entry", href="/entry", active="exact"),
                 dbc.NavLink("Information", href="/information", active="exact"),
             ],
@@ -97,8 +97,8 @@ def display_page(pathname):
     if entry.update_counter != update_status_counter:
         update_db()
 
-    if pathname == '/accounts':
-        return accounts.layout
+    if pathname == '/assets':
+        return assets.layout
 
     elif pathname == '/entry':
         return entry_layout
