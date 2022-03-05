@@ -130,8 +130,8 @@ def layout():
 
                     dcc.Dropdown(
                         id="entry-currency",
-                        options=[{"label": i, "value": i} for i in df['currency'].unique()],
-                        value=df['currency'].unique()[0],
+                        options=[{"label": "", "value": ""}],
+                        value="",
                         clearable=False
                     ),
                 ], style={'width': '10%', 'display': 'inline-block', 'float':'left'}),
@@ -419,6 +419,19 @@ def create_list_for_transaction_sub_category(transaction_type, transaction_categ
     transaction_sub_category = list(category_dict[transaction_type]['Categories'][transaction_category]['Sub-categories'].keys())
     
     return [{"label": i, "value": i} for i in transaction_sub_category]
+
+# update unit list when sub-category is defined
+@app.callback(
+    [Output("entry-currency", "options"),
+    Output("entry-currency", "value")],
+    [Input("entry-transaction-type", "value"),
+     Input("entry-category", "value"),
+     Input("entry-sub-category", "value")]
+)
+def create_list_for_transaction_sub_category(transaction_type, transaction_category, transaction_subcategory):
+    unit = category_dict[transaction_type]['Categories'][transaction_category]['Sub-categories'][transaction_subcategory]['Unit']
+    
+    return [{"label": i, "value": i} for i in unit], unit[0]
 
 # update transaction type when cash-out
 @app.callback(
