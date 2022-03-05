@@ -100,7 +100,7 @@ def layout():
                     "value_category": 'All',
                     "value_subcategory": 'All',
                 }
-            ), style={'width': '50%', 'display': 'inline-block'}
+            ), style={'width': '100%', 'display': 'inline-block'}
         ),
         
         # --------
@@ -155,14 +155,7 @@ def display_daily_expenses(month_daily, year_daily):
     [Input("transaction-type-filter", "value")]
 )
 def create_list_for_transaction_category(transaction_type):
-    if transaction_type == 'All':
-        transaction_category = df['category'].unique().tolist()
-        transaction_category = ['All'] + transaction_category
-    else:
-        transaction_category = df[df['transaction_type'] == transaction_type]['category'].unique().tolist()
-        transaction_category = ['All'] + transaction_category
-    
-    return [{"label": i, "value": i} for i in transaction_category]
+    return utils_plotly.create_list_for_transaction_category(transaction_type)
 
 # update sub-category list when category changes
 @app.callback(
@@ -170,19 +163,8 @@ def create_list_for_transaction_category(transaction_type):
     [Input("transaction-type-filter", "value"),
      Input("transaction-category-filter", "value")]
 )
-def create_list_for_transaction_sub_category(transaction_type, category):
-    if transaction_type == 'All':
-        transaction_sub_category = df['sub_category'].unique().tolist()
-        transaction_sub_category = ['All'] + transaction_sub_category
-        
-    elif category == 'All':
-        transaction_sub_category = df[(df['transaction_type'] == transaction_type)]['sub_category'].unique().tolist()
-        transaction_sub_category = ['All'] + transaction_sub_category
-    else:
-        transaction_sub_category = df[(df['transaction_type'] == transaction_type) & ((df['category'] == category))]['sub_category'].unique().tolist()
-        transaction_sub_category = ['All'] + transaction_sub_category
-    
-    return [{"label": i, "value": i} for i in transaction_sub_category]
+def create_list_for_transaction_sub_category(transaction_type, transaction_category):
+    return utils_plotly.ceate_list_for_transaction_sub_category(transaction_type, transaction_category)
 
 
 # default All when new option

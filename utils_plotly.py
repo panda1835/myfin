@@ -1,8 +1,11 @@
 import dash_html_components as html
 import dash_core_components as dcc
 import datetime
-
+import json
 import utils
+
+with open("category.json", 'r') as f:    
+    category_dict = json.load(f)
 
 dropdown_option_month = [
     {"label": 'January'  , "value": '01'},
@@ -95,7 +98,10 @@ def month_year_dropdown(id_dict, value_dict):
     ]
 
 def type_category_subcategory_dropdown(id_dict, value_dict):
-
+    """
+    id_dict: dict of item id
+    value_dict: dict of default value
+    """
     id_type = id_dict['id_type']
     id_category = id_dict['id_category']
     id_subcategory = id_dict['id_subcategory']
@@ -149,3 +155,38 @@ def type_category_subcategory_dropdown(id_dict, value_dict):
         ], style={'width': '20%', 'display': 'inline-block'})
     ]
             
+def create_list_for_transaction_category(transaction_type):
+    """
+    list all categories of a transaction type
+    For example: if transaction_type is Expenses: --> return ['Required Expenses', 'Transportation', 'Up & Comers',...]
+    """
+
+    if transaction_type == 'All':
+        transaction_category = []
+        for category in category_dict.keys():
+            transaction_category += list(category_dict[category]['Categories'].keys())
+        transaction_category = ['All'] + transaction_category
+    else:
+        transaction_category = list(category_dict[transaction_type]['Categories'].keys())
+        transaction_category = ['All'] + transaction_category
+    
+    return [{"label": i, "value": i} for i in transaction_category]
+
+def ceate_list_for_transaction_sub_category(transaction_type, transaction_category):
+    if transaction_type == "All":
+        transaction_sub_category = []
+        for transaction in category_dict.keys():
+             for category in category_dict[transaction]['Categories'].keys():
+                transaction_sub_category += list(category_dict[transaction]['Categories'][category]['Sub-categories'].keys()) 
+        transaction_category = ['All'] + transaction_category
+
+    elif transaction_category == 'All': 
+        transaction_sub_category = []
+        for category in category_dict[transaction_type]['Categories'].keys():
+            transaction_sub_category += list(category_dict[transaction_type]['Categories'][category]['Sub-categories'].keys())
+        transaction_sub_category = ['All'] + transaction_sub_category
+    else:
+        transaction_sub_category = list(category_dict[transaction_type]['Categories'][transaction_category]['Sub-categories'].keys())
+        transaction_sub_category = ['All'] + transaction_sub_category
+    
+    return [{"label": i, "value": i} for i in transaction_sub_category]
