@@ -17,6 +17,9 @@ with open('data.json','r') as f:
     database_name = data['constant']['DATABASE_NAME']
 df = init_database.init_database()
 
+with open("category.json", 'r') as f:    
+    category_dict = json.load(f)
+
 update_counter = 0
 
 def layout():
@@ -53,15 +56,15 @@ def layout():
                 ], style={'display':'inline-block', 'float':'left'}),
 
                 html.Div([
-                    html.Div("Cash In/Out", 
+                    html.Div("In/Out", 
                         style={
                             'display': 'block',
                         }),
 
                     dcc.Dropdown(
                         id="entry-in-out",
-                        options=[{"label": i, "value": i} for i in ['Cash In', 'Cash Out']],
-                        value='Cash In',
+                        options=[{"label": i, "value": i} for i in ['Incoming', 'Outgoing']],
+                        value='Incoming',
                         clearable=False
                     ),
                 ], style={'width':'10%', 'display': 'inline-block', 'float':'left'}),
@@ -120,7 +123,7 @@ def layout():
                         'margin-left': '5px'}),
 
                 html.Div([
-                    html.Div("Currency", 
+                    html.Div("Unit", 
                         style={
                             'display': 'block',
                         }),
@@ -280,7 +283,7 @@ def layout():
 def add_row_to_preview_table(n_clicks, rows, columns,
             date, transaction_type, category, sub_category, amount, currency, note, in_out):
     sign = ''
-    if in_out == "Cash Out":
+    if in_out == "Outgoing":
         sign = '-'
         
     date = date.split('T')[0]
@@ -402,7 +405,7 @@ def add_row(n_clicks):
     [Input("entry-transaction-type", "value")]
 )
 def create_list_for_transaction_category(transaction_type):
-    transaction_category = df[df['transaction_type'] == transaction_type]['category'].unique().tolist()
+    transaction_category = list(category_dict[transaction_type]['Categories'].keys())
     
     return [{"label": i, "value": i} for i in transaction_category]
 
@@ -412,8 +415,8 @@ def create_list_for_transaction_category(transaction_type):
     [Input("entry-transaction-type", "value"),
      Input("entry-category", "value")]
 )
-def create_list_for_transaction_sub_category(transaction_type, category):
-    transaction_sub_category = df[(df['transaction_type'] == transaction_type) & ((df['category'] == category))]['sub_category'].unique().tolist()
+def create_list_for_transaction_sub_category(transaction_type, transaction_category):
+    transaction_sub_category = list(category_dict[transaction_type]['Categories'][transaction_category]['Sub-categories'].keys())
     
     return [{"label": i, "value": i} for i in transaction_sub_category]
 
@@ -423,7 +426,7 @@ def create_list_for_transaction_sub_category(transaction_type, category):
     [Input("entry-in-out", "value")]
 )
 def update_transaction_type_when_cash_out(cash_in_out):
-    if cash_in_out == 'Cash Out':
+    if cash_in_out == 'Outgoing':
         return 'Assets'
     else:
         return 'Expenses'
@@ -442,7 +445,7 @@ def update_amount_when_cash_out(cash_in_out, rows, columns, n_clicks):
     df.amount = df.amount.astype('int32')
     if n_clicks > 0:
         return ''
-    elif cash_in_out == 'Cash Out':
+    elif cash_in_out == 'Outgoing':
         return df.amount.sum()
     else:
         return None
