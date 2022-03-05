@@ -205,9 +205,9 @@ def layout():
                             "id_year": "start-year-entry-remove"
                         },
                         {
-                            "value_date": utils.last_day_date,
-                            "value_month": utils.last_day_month,
-                            "value_year": utils.last_day_year,
+                            "value_date": utils.first_day_date,
+                            "value_month": utils.first_day_month,
+                            "value_year": utils.first_day_year,
                         }
                     ), style={'width': '50%', 'display': 'inline-block'}
                 ),
@@ -230,6 +230,21 @@ def layout():
                 
                 # --------
             ]),
+
+            html.Div(
+                utils_plotly.type_category_subcategory_dropdown(
+                    {
+                        "id_type": "entry-edit-type-filter",
+                        "id_category": "entry-edit-category-filter",
+                        "id_subcategory": "entry-edit-sub-category-filter",
+                    },
+                    {
+                        "value_type": 'Expenses',
+                        "value_category": 'All',
+                        "value_subcategory": 'All',
+                    }
+                ), style={'width': '100%', 'display': 'inline-block'}
+            ),
                 
             dash_table.DataTable(
                     id='entry-remove-table',
@@ -266,6 +281,128 @@ def layout():
 
 ])
 
+# ===== REMOVE/EDIT ENTRY =====
+# update category list when transaction_type changes
+@app.callback(
+    Output("entry-edit-category-filter", "options"), 
+    [Input("entry-edit-type-filter", "value")]
+)
+def create_list_for_transaction_category(transaction_type):
+    return utils_plotly.create_list_for_transaction_category(transaction_type)
+
+# update sub-category list when category changes
+@app.callback(
+    Output("entry-edit-sub-category-filter", "options"), 
+    [Input("entry-edit-type-filter", "value"),
+     Input("entry-edit-category-filter", "value")]
+)
+def create_list_for_transaction_sub_category(transaction_type, transaction_category):
+    return utils_plotly.ceate_list_for_transaction_sub_category(transaction_type, transaction_category)
+
+# display remove/edit table that is editable
+@app.callback(
+    Output("entry-remove-table", "data"), 
+    [Input("start-date-entry-remove", "value"), 
+     Input("start-month-entry-remove", "value"),
+     Input("start-year-entry-remove", "value"), 
+     Input("end-date-entry-remove", "value"),
+     Input("end-month-entry-remove", "value"), 
+     Input("end-year-entry-remove", "value"),
+     Input("entry-edit-type-filter", "value"),
+     Input("entry-edit-category-filter", "value"),
+     Input("entry-edit-sub-category-filter", "value")]
+)
+def display_daily_expenses(start_date, start_month, start_year,
+                           end_date, end_month, end_year,
+                           transaction_type,
+                           category,
+                           sub_category):
+    
+    transaction_df = df.copy()
+    transaction_df['date'] = pd.to_datetime(transaction_df['date'])
+    start_day = f"{start_year}-{start_month}-{start_date}"
+    end_day = f"{end_year}-{end_month}-{end_date}"
+
+    transaction_df = transaction_df[(transaction_df['date'] >= start_day) & (transaction_df['date'] <= end_day)]
+    
+    transaction_df['date'] = transaction_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
+
+    if transaction_type != "All":
+        transaction_df = transaction_df[transaction_df['transaction_type'] == transaction_type]
+        
+    if category != "All":
+        transaction_df = transaction_df[transaction_df['category'] == category]
+        
+    if sub_category != "All":
+        transaction_df = transaction_df[transaction_df['sub_category'] == sub_category]    
+    
+    # cast from float to int to format
+    transaction_df['amount'] = transaction_df['amount'].astype('int64')
+    transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
+    return transaction_df.to_dict('records')
+
+# save to database in remove/edit entry
+@app.callback(
+    Output('save-success-notification', 'children'),
+    [Input('remove-entry-save-button', 'n_clicks'),
+     Input("start-date-entry-remove", "value"), 
+     Input("start-month-entry-remove", "value"),
+     Input("start-year-entry-remove", "value"), 
+     Input("end-date-entry-remove", "value"),
+     Input("end-month-entry-remove", "value"), 
+     Input("end-year-entry-remove", "value"),
+     Input("entry-edit-type-filter", "value"),
+     Input("entry-edit-category-filter", "value"),
+     Input("entry-edit-sub-category-filter", "value")],
+    [State('entry-remove-table', 'data'),
+    State('entry-remove-table', 'columns')])
+    
+def update_entry_table(n_clicks_remove, 
+                       start_date, start_month, start_year,
+                       end_date, end_month, end_year,
+                       transaction_type,
+                       category,
+                       sub_category,
+                       rows, columns):
+    global update_counter
+    if n_clicks_remove > 0: 
+        new_entry = pd.DataFrame(rows, columns=[c['name'] for c in columns])
+        # remove , seperator in amount column
+        new_entry.amount = new_entry.amount.str.replace(',', '')
+
+        database_df = df.copy()
+
+        database_df['date'] = pd.to_datetime(database_df['date'])
+        database_df['date'] = database_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
+        start_day = f"{start_year}-{start_month}-{start_date}"
+        end_day = f"{end_year}-{end_month}-{end_date}"
+
+        old_entry = database_df[(database_df['date'] >= start_day) & (database_df['date'] <= end_day)]
+    
+        if transaction_type != "All":
+            old_entry = old_entry[old_entry['transaction_type'] == transaction_type]
+            
+        if category != "All":
+            old_entry = old_entry[old_entry['category'] == category]
+            
+        if sub_category != "All":
+            old_entry = old_entry[old_entry['sub_category'] == sub_category]
+
+        database_df = pd.concat([old_entry, database_df]).drop_duplicates(keep=False)
+
+        database_df = database_df.append(new_entry)
+        
+        database_df['Date'] = pd.to_datetime(database_df['date'])
+        database_df.sort_values(by=['Date'], inplace=True)
+        database_df.drop(columns = ["Date"], inplace=True)
+        
+        database_df.to_csv(database_name, index=False)
+
+        update_counter += 1
+
+    return html.Div('')
+
+# ===== ADD NEW ENTRY =====
 # add row to preview table in add entry
 @app.callback(
     Output('entry-preview-table-add', 'data'),
@@ -343,53 +480,6 @@ def save_new_entry(n_clicks_add, rows, columns):
         update_counter += 1
         
     return database_df[utils.display_columns].iloc[::-1].to_dict('records')
-
-# save to database in remove/edit entry
-@app.callback(
-    Output('save-success-notification', 'children'),
-    [Input('remove-entry-save-button', 'n_clicks'),
-     Input("start-date-entry-remove", "value"), 
-     Input("start-month-entry-remove", "value"),
-     Input("start-year-entry-remove", "value"), 
-     Input("end-date-entry-remove", "value"),
-     Input("end-month-entry-remove", "value"), 
-     Input("end-year-entry-remove", "value")],
-    [State('entry-remove-table', 'data'),
-    State('entry-remove-table', 'columns')])
-    
-def update_entry_table(n_clicks_remove, 
-                       start_date, start_month, start_year,
-                       end_date, end_month, end_year,
-                       rows, columns):
-    global update_counter
-    if n_clicks_remove > 0: 
-        new_entry = pd.DataFrame(rows, columns=[c['name'] for c in columns])
-        # remove , seperator in amount column
-        new_entry.amount = new_entry.amount.str.replace(',', '')
-
-        database_df = df.copy()
-
-        database_df['date'] = pd.to_datetime(database_df['date'])
-        database_df['date'] = database_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
-        start_day = f"{start_year}-{start_month}-{start_date}"
-        end_day = f"{end_year}-{end_month}-{end_date}"
-
-        old_entry = database_df[(database_df['date'] >= start_day) & 
-                                              (database_df['date'] <= end_day)]
-        database_df = pd.concat([old_entry, database_df]).drop_duplicates(keep=False)
-
-        database_df = database_df.append(new_entry)
-        
-        database_df['Date'] = pd.to_datetime(database_df['date'])
-        database_df.sort_values(by=['Date'], inplace=True)
-        database_df.drop(columns = ["Date"], inplace=True)
-        
-        database_df.to_csv(database_name, index=False)
-
-        update_counter += 1
-
-    return html.Div('')
-
 
 # refresh entry note after saving
 @app.callback(
@@ -486,33 +576,6 @@ def enable_entry_enter_button(rows):
         return True
     else:
         return False
-
-# display remove/edit table that is editable
-@app.callback(
-    Output("entry-remove-table", "data"), 
-    [Input("start-date-entry-remove", "value"), 
-     Input("start-month-entry-remove", "value"),
-     Input("start-year-entry-remove", "value"), 
-     Input("end-date-entry-remove", "value"),
-     Input("end-month-entry-remove", "value"), 
-     Input("end-year-entry-remove", "value"),]
-)
-def display_daily_expenses(start_date, start_month, start_year,
-                           end_date, end_month, end_year):
-    
-    transaction_df = df.copy()
-    transaction_df['date'] = pd.to_datetime(transaction_df['date'])
-    start_day = f"{start_year}-{start_month}-{start_date}"
-    end_day = f"{end_year}-{end_month}-{end_date}"
-
-    transaction_df = transaction_df[(transaction_df['date'] >= start_day) & (transaction_df['date'] <= end_day)]
-    
-    transaction_df['date'] = transaction_df['date'].apply(lambda x: x.strftime('%Y-%m-%d'))
-    
-    # cast from float to int to format
-    transaction_df['amount'] = transaction_df['amount'].astype('int64')
-    transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
-    return transaction_df.to_dict('records')
 
 # update amount sum in add entry
 @app.callback(
