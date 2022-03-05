@@ -3,7 +3,6 @@
 + [ ] Visualize financial ladder and where I am
 + [ ] Display Normal and Basic expenses amount
 + [ ] Recurring payment such as Phone Service
-+ [ ] Hide some categories such as tuition
 + [ ] Add/Edit/Drop categories
 + [ ] Calculate Basic/normal expenses based on pre-defined categories 
 
