@@ -118,7 +118,7 @@ def type_category_subcategory_dropdown(id_dict, value_dict):
                 value=value_type,
                 clearable=False
             ),
-        ], style={'width': '8%', 'display': 'inline-block'}),
+        ], style={'width': '10%', 'display': 'inline-block'}),
 
         html.Div([
             html.Div("Category", 
@@ -132,7 +132,7 @@ def type_category_subcategory_dropdown(id_dict, value_dict):
                 value=value_category,
                 clearable=False
             ),
-        ], style={'width': '11%', 'display': 'inline-block'}),
+        ], style={'width': '20%', 'display': 'inline-block'}),
 
         html.Div([
             
@@ -146,6 +146,6 @@ def type_category_subcategory_dropdown(id_dict, value_dict):
                 value=value_subcategory,
                 clearable=False
             ),
-        ], style={'width': '12%', 'display': 'inline-block'})
+        ], style={'width': '20%', 'display': 'inline-block'})
     ]
             
