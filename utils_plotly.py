@@ -120,7 +120,7 @@ def type_category_subcategory_dropdown(id_dict, value_dict):
             
             dcc.Dropdown(
                 id=id_type,
-                options=[{"label": i, "value": i} for i in utils.transaction_list],
+                options=[{"label": i, "value": i} for i in list(category_dict.keys())],
                 value=value_type,
                 clearable=False
             ),
