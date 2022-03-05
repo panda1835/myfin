@@ -3,6 +3,6 @@
     "constant": {
         "MONEY_ALLOCATED_FOR_NECESSITY_PER_MONTH": 2800000,
         "MONEY_ALLOCATED_FOR_EDUCATION_AND_ENTERTAINMENT_PER_MONTH": 500000,
-        "DATABASE_NAME": "transaction_2.csv"
+        "DATABASE_NAME": "transaction.csv"
     }
 }
