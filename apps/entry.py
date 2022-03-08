@@ -77,7 +77,7 @@ def layout():
 
                     dcc.Dropdown(
                         id="entry-transaction-type",
-                        options=[{"label": i, "value": i} for i in df['transaction_type'].unique()],
+                        options=[{"label": i, "value": i} for i in category_dict.keys()],
                         value='Expenses',
                         clearable=False
                     ),
