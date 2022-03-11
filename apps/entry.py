@@ -456,10 +456,11 @@ def add_row_to_preview_table(n_clicks, rows, columns,
 
 # save to database in add entry
 @app.callback(
-    Output('entry-db-table', 'data'),
-    Input('entry-save-add', 'n_clicks'),
+    [Output('entry-db-table', 'data'),
+    Output('entry-save-add', 'n_clicks')],
+    [Input('entry-save-add', 'n_clicks'),
     Input('entry-preview-table-add', 'data'),
-    Input('entry-preview-table-add', 'columns'))
+    Input('entry-preview-table-add', 'columns')])
     
 def save_new_entry(n_clicks_add, rows, columns):
     global update_counter
@@ -479,7 +480,7 @@ def save_new_entry(n_clicks_add, rows, columns):
 
         update_counter += 1
         
-    return database_df[utils.display_columns].iloc[::-1].to_dict('records')
+    return database_df[utils.display_columns].iloc[::-1].to_dict('records'), 0
 
 # refresh entry note after saving
 @app.callback(
