@@ -47,7 +47,8 @@ def generate_category(asset_category):
         generate_subcategory(asset_category, asset_subcategory) for asset_subcategory in category_dict['Assets']['Categories'][asset_category]['Sub-categories'].keys()       
     ])
 
-layout = html.Div([
-    generate_category(asset_category) for asset_category in category_dict['Assets']['Categories'].keys()
-])
+def layout():
+    return html.Div([
+        generate_category(asset_category) for asset_category in category_dict['Assets']['Categories'].keys()
+    ])
 

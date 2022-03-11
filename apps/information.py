@@ -10,8 +10,9 @@ df = init_database.init_database()
 with open('info_page.md', 'r') as f:
     info_content = f.read()
 
-layout = html.Div([
-    html.Div([
-        dcc.Markdown(info_content)
+def layout():
+    return html.Div([
+        html.Div([
+            dcc.Markdown(info_content)
+        ])
     ])
-])

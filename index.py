@@ -57,6 +57,8 @@ update_status_counter = 0
 entry_layout = entry.layout()
 overview_layout = overview.layout()
 transaction_layout = transaction.layout()
+assets_layout = assets.layout()
+information_layout = information.layout()
 
 
 def update_db():
@@ -64,15 +66,18 @@ def update_db():
     global entry_layout
     global overview_layout
     global transaction_layout
+    global assets_layout
 
     df = init_database.init_database()
     entry.df = df
     overview.df = df
     transaction.df = df
+    assets.df = df
 
     entry_layout = entry.layout()
     overview_layout = overview.layout()
     transaction_layout = transaction.layout()
+    assets_layout = assets.layout()
 
     update_status_counter = entry.update_counter
 
@@ -98,13 +103,13 @@ def display_page(pathname):
         update_db()
 
     if pathname == '/assets':
-        return assets.layout
+        return assets_layout
 
     elif pathname == '/entry':
         return entry_layout
 
     elif pathname == '/information':
-        return information.layout
+        return information_layout
 
     elif pathname == '/overview':
         return overview_layout
