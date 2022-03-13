@@ -278,7 +278,7 @@
 
             "Accounts Payable": {
                 "Description": "",
-                "Sub-category": {
+                "Sub-categories": {
                     "Cash": {
                         "Description": "",
                         "Unit": [
@@ -297,7 +297,7 @@
 
             "Savings": {
                 "Description": "",
-                "Sub-category": {
+                "Sub-categories": {
                     "Saving-01": {
                         "Description": "",
                         "Unit": [
@@ -309,7 +309,7 @@
 
             "Commodities": {
                 "Description": "Commodities are things you own that can exchanged into money. It has unit of quantity and the price changes over time",
-                "Sub-category": {
+                "Sub-categories": {
                     "Stocks": {
                         "Description": "",
                         "Unit": [
