@@ -1,9 +1,8 @@
 import dash
 import dash_bootstrap_components as dbc
-from jupyter_dash import JupyterDash
+# from jupyter_dash import JupyterDash
 
 import webbrowser as web
-#ToDo: browser
 
 web.open_new_tab('http://127.0.0.1:8050/')
 
