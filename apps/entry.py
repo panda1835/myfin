@@ -312,7 +312,7 @@ def create_list_for_transaction_sub_category(transaction_type, transaction_categ
      Input("entry-edit-category-filter", "value"),
      Input("entry-edit-sub-category-filter", "value")]
 )
-def display_daily_expenses(start_date, start_month, start_year,
+def display_remove_table(start_date, start_month, start_year,
                            end_date, end_month, end_year,
                            transaction_type,
                            category,
@@ -337,8 +337,11 @@ def display_daily_expenses(start_date, start_month, start_year,
         transaction_df = transaction_df[transaction_df['sub_category'] == sub_category]    
     
     # cast from float to int to format
-    transaction_df['amount'] = transaction_df['amount'].astype('int64')
-    transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
+    try: # for cases where we need floating point like $0.5
+        transaction_df['amount'] = transaction_df['amount'].astype('int64')
+        transaction_df['amount'] = transaction_df['amount'].map('{:,d}'.format)
+    except:
+        pass
     return transaction_df.to_dict('records')
 
 # save to database in remove/edit entry
@@ -448,10 +451,12 @@ def add_row_to_preview_table(n_clicks, rows, columns,
             sum_df = pd.DataFrame.from_records(rows)
             sum_df = sum_df.append(new_entry_df)
         
-        sum_df['amount'] = sum_df['amount'].str.replace(',', '')
-        sum_df['amount'] = sum_df['amount'].astype('int64')
-        sum_df['amount'] = sum_df['amount'].map('{:,d}'.format)
-        
+        # sum_df['amount'] = sum_df['amount'].str.replace(',', '')
+        try: # for cases where we need floating point like $0.5
+            sum_df['amount'] = sum_df['amount'].astype('int64')
+            sum_df['amount'] = sum_df['amount'].map('{:,d}'.format)
+        except:
+            pass    
         return sum_df.to_dict("records")
 
 # save to database in add entry
@@ -546,7 +551,10 @@ def update_transaction_type_when_cash_out(cash_in_out):
 def update_amount_when_cash_out(cash_in_out, rows, columns, n_clicks):
     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
     df.amount = df.amount.str.replace(',', '')
-    df.amount = df.amount.astype('int32')
+    try: # for cases where we need floating point like $0.5
+        df.amount = df.amount.astype('int32')
+    except:
+        pass
     if n_clicks > 0:
         return ''
     elif cash_in_out == 'Outgoing':
@@ -587,8 +595,16 @@ def enable_entry_enter_button(rows):
 def display_total_sum_add(rows, columns):
     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
     df.amount = df.amount.str.replace(',', '')
-    df.amount = df.amount.astype('int32')
-    return html.Div(f' {"{:,}".format(df.amount.sum())} VND')
+    try: # for cases where we need floating point like $0.5
+        df.amount = df.amount.astype('int32')
+    except:
+        pass
+    
+    try:
+        return_string = f' {"{:,}".format(df.amount.sum())}'
+    except:
+        return_string = df.amount.sum()
+    return html.Div(return_string)
 
 # update amount sum in remove entry
 @app.callback(
@@ -599,5 +615,8 @@ def display_total_sum_add(rows, columns):
 def display_total_sum_remove(rows, columns):
     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
     df.amount = df.amount.str.replace(',', '')
-    df.amount = df.amount.astype('int32')
+    try:
+        df.amount = df.amount.astype('int32')
+    except:
+        pass
     return html.Div(f' {"{:,}".format(df.amount.sum())} VND')
