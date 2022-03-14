@@ -451,7 +451,7 @@ def add_row_to_preview_table(n_clicks, rows, columns,
             sum_df = pd.DataFrame.from_records(rows)
             sum_df = sum_df.append(new_entry_df)
         
-        # sum_df['amount'] = sum_df['amount'].str.replace(',', '')
+        sum_df['amount'] = sum_df['amount'].str.replace(',', '')
         try: # for cases where we need floating point like $0.5
             sum_df['amount'] = sum_df['amount'].astype('int64')
             sum_df['amount'] = sum_df['amount'].map('{:,d}'.format)
